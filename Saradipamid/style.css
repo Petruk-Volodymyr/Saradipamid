@@ -1,0 +1,195 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-size: 24px;
+	color: #252525;
+}
+body{
+	background-color: #EFF5F9;
+}
+h1{
+	font-size: 30px;
+}
+/*Konfiguracja hedera*/
+header{
+	width: 100%;
+	height: 50px;
+}
+header>.menu{
+	display: flex;
+	float: left;
+	padding: 1%;
+	background-color: #EEF5FA;
+}
+header>.menu1, .menu3{
+	width: 18%;
+	height: 100%;
+	background-color: #EEF5FA;
+}
+header>.menu1>p{
+	font-size: 30px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+header>.menu2{
+	width: 58%;
+	height: 100%;
+	justify-content: space-between;
+}
+header>.menu2>a{
+	margin-top: auto;
+	margin-bottom: auto;
+	text-decoration: none;
+}
+/*sekcja witryby*/
+#witr{
+	width: 100%;
+
+}
+#witr>section{
+	width: 100%;
+	height: 810px;
+	background: url("img/BBD/pres.jpg") no-repeat;
+	background-size: 100%;
+}
+#witr>section>div{
+	width: 34%;
+	height: 95%;
+	padding: 1%;
+}
+#witr>section>div>div{
+	width: 97%;
+	height: 59%;
+	padding: 1%;
+	margin-top: 20%;
+	
+}
+#witr>section>div>div>button{
+	border-radius: 25px;
+	border: none;
+}
+#witr>section>div>div>.knopka1{
+	width: 62%;
+	padding: 3%;
+	border-radius: 30px;
+	background-color: #F6AE24;
+}
+#witr>section>div>div>button:hover{
+	cursor: pointer;
+}
+#witr>section>div>div>.knopka1:hover{
+	background-color: #DD9B1F;
+}
+#witr>section>div>div>.knopka2{
+	width: 33%;
+	padding: 2%;
+	background-color: #ECF0F4;
+}
+#witr>section>div>div>.knopka2:hover{
+	background-color: #DEE2E5;
+}
+.lal{
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .5);
+	left: 0;
+	top: 0;
+	z-index: 2;
+}
+.lal>.buba{
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+.lal>.buba>.beba{
+	display: flex;
+	margin: auto;
+	background-color: #382D25;
+	width: 50%;
+	height: 70%;
+	border-radius: 20px;
+	padding: 2%;
+	text-align: center;
+}
+.lal>.buba>.beba>iframe{
+	display: flex;
+	margin: auto;
+	width: 90%;
+	height: 90%;
+	border-radius: 15px;
+}
+.lal>.buba>.beba>img{
+	display: flex;
+	margin: auto;
+	width: 10px;
+	height: 10px;
+	position: inherit;
+	bottom: 0;
+}
+/*Komentarze*/
+#otz{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+#otz>.koment{
+	width: 15%;
+	padding: 1%;
+	border-radius: 30px;
+	background-color: #E8EEF1;
+}
+#otz>.koment4{
+	background-color: #FEDE75;
+}
+#otz>.koment5{
+	background-color: #382D25;
+}
+/*towar*/
+#towar{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+#towar>.tow{
+	width: 15%;
+}
+#towar>.tow>div{
+	width: 98%;
+	padding: 1%;
+	border-radius: 15px;
+	background-color: #E8EEF1;
+}
+#towar>.tow>div>a>input{
+	border: none;
+	padding: 2%;
+	border-radius: 10px;
+	margin-left: 32%;
+	color: #E8EEF1;
+	background-color: #252525;
+}
+#towar>.tow>div>a>input:hover{
+	cursor: pointer;
+}
+#towar>.tow>img{
+	width: 100%;
+	height: 70%;
+}
+/*stopka*/
+footer{
+	width: 100%;
+	
+	position: inherit;
+	bottom: 0;
+	background-color: #E8EEF1;
+	display: flex;
+	justify-content: center;
+}
+footer>div{
+	width: 40%;
+	padding: 2%;
+}
+footer>div>h1{
+	text-align: center;
+}
