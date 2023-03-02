@@ -160,25 +160,25 @@
 
 	</article>
 	<footer id="stop">
-		
-		<div class="fot1">
 			
-			<h1>O nas</h1>
-			<br>
-			<p>Jesteśmy firmą z Karpat. Produkujemy najlepsze skarpetki na całą Urkainę. Nasze skarpetki mogą wytrzymać bombę, i nawet agresywnego Żiomka który pomyślał że ty dziura dla seksu.</p>
-			<br>
-			<h2>Kontakt:</h2><a href="#">skarpetkikarpaty@gmail.com</a>
+			<div class="fot1">
+				
+				<h1>O nas</h1>
+				<br>
+				<p>Jesteśmy firmą z Karpat. Produkujemy najlepsze skarpetki na całą Urkainę. Nasze skarpetki mogą wytrzymać bombę.</p>
+				<br>
+				<h2>Kontakt:</h2><a href="#">skarpetkikarpaty@gmail.com</a>
 
-		</div>
-		<div class="fot2">
-			
-			<h1>Wsparcie</h1>
-			<br>
-			<p>Jak masz jakiś problem to możesz napisać do naszego specjalisty <a href="https://www.youtube.com/shorts/CbcFFYhYMfg" target="blank">Wiktora</a>, który ci pomoże, ale jak powiesz coś złego. To ciebie gówniaka wyżucimy do kanały.</p>
-			<br>
-			<h2>Cpyright&copy Nosky Karpaty Interprice 2023</h2>
+			</div>
+			<div class="fot2">
+				
+				<h1>Wsparcie</h1>
+				<br>
+				<p>Jak masz jakiś problem to możesz napisać do naszego specjalisty Wiktora, który ci pomoże, ale jak powiesz coś złego. To ciebie wyżucimy do kanały.</p>
+				<br>
+				<h2>Cpyright&copy Nosky Karpaty Interprice 2023</h2>
 
-		</div>
+			</div>
 
 	</footer>
 
