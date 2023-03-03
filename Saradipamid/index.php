@@ -111,7 +111,7 @@
 			</h1>
 			<br>
 			<p>
-				Ja pidaras
+				Ja ukrainets
 			</p>
 			<img src="" alt="">
 		</div>
@@ -121,7 +121,7 @@
 			</h1>
 			<br>
 			<p style="color: #EFF5F9;">
-				Ja brudny pizdabol
+				Slawa merlou
 			</p>
 			<img src="" alt="">
 		</div>
