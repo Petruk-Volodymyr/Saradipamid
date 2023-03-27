@@ -41,6 +41,12 @@ header>.menu2>a{
 	margin-bottom: auto;
 	text-decoration: none;
 }
+header>.menu3{
+	display: block;
+}
+header>.menu3>.log{
+	float: right;
+}
 /*sekcja witryby*/
 #witr{
 	width: 100%;
@@ -128,51 +134,48 @@ header>.menu2>a{
 	position: inherit;
 	bottom: 0;
 }
-/*Komentarze*/
-#otz{
-	width: 100%;
-	display: flex;
-	justify-content: space-around;
-}
-#otz>.koment{
-	width: 15%;
-	padding: 1%;
-	border-radius: 30px;
-	background-color: #E8EEF1;
-}
-#otz>.koment4{
-	background-color: #FEDE75;
-}
-#otz>.koment5{
-	background-color: #382D25;
-}
 /*towar*/
+.nag>p{
+	padding: 1%;
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	width: 20%;
+	border: 1px solid #252525;
+}
+.nag>a{
+	padding: 1%;
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	width: 10%;
+	border: 1px solid #252525;
+	text-decoration: none;
+}
 #towar{
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
+	flex-wrap: wrap;
 }
-#towar>.tow{
-	width: 15%;
-}
-#towar>.tow>div{
-	width: 98%;
-	padding: 1%;
-	border-radius: 15px;
+#towar>.to{
+	width: 18%;
+	text-decoration: none;
+	border-radius: 10px;
 	background-color: #E8EEF1;
 }
-#towar>.tow>div>a>input{
-	border: none;
-	padding: 2%;
-	border-radius: 10px;
-	margin-left: 32%;
-	color: #E8EEF1;
-	background-color: #252525;
+#towar>.to>.tow>div{
+	width: 98%;
+	padding: 1%;
 }
-#towar>.tow>div>a>input:hover{
+#towar>.to>.tow>div>a>input:hover{
 	cursor: pointer;
 }
-#towar>.tow>img{
+#towar>.to>.tow>img{
 	width: 100%;
 	height: 70%;
 }

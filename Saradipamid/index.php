@@ -12,7 +12,7 @@
 
 			<div class="beba">
 				
-				<iframe src="https://www.youtube.com/embed/88cvrY82yVU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				
 
 
 			</div>
@@ -41,7 +41,11 @@
 			<a href="#stop">O nas</a>
 
 		</div>
-		<div class="menu menu3"></div>
+		<div class="menu menu3">
+			
+			<div class="log"><a href=""><img src="img/BBD/profile.png" alt=""></a></div>
+
+		</div>
 
 	</header>
 	<br>
@@ -73,73 +77,23 @@
 
 	</article>
 	<br>
-	<article id="otz">
-		
-		<div class="koment koment1">
-			<h1>
-				WorekSpermy
-			</h1>
-			<br>
-			<p>
-				hack because lose, unskilled without
-			</p>
-			<img src="" alt="">
-		</div>
-		<div class="koment koment2">
-			<h1>
-				Sensey
-			</h1>
-			<br>
-			<p>
-				Cholera, Atak Tytanów to arcydzieło
-			</p>
-			<img src="" alt="">
-		</div>
-		<div class="koment koment3">
-			<h1>
-				Natural
-			</h1>
-			<br>
-			<p>
-				Za komunizm i dwor. Ale ja amerykańczyk
-			</p>
-			<img src="" alt="">
-		</div>
-		<div class="koment koment4">
-			<h1>
-				Blanche
-			</h1>
-			<br>
-			<p>
-				Ja ukrainets
-			</p>
-			<img src="" alt="">
-		</div>
-		<div class="koment koment5">
-			<h1 style="color: #EFF5F9;">
-				Żenia
-			</h1>
-			<br>
-			<p style="color: #EFF5F9;">
-				Slawa merlou
-			</p>
-			<img src="" alt="">
-		</div>
-
-	</article>
+	<h1 class="nag"><p>Ostatnie towary</p></h1>
 	<br>
 	<article id="towar">
+
+
 		
 		<?php 
 
 		$conn = mysqli_connect('localhost', 'root', '', 'saradipamid');
-		$com = "SELECT noski.id, noski.nazwa, noski.cena, noski.foto, typy.typ, typy.opis FROM noski, typy WHERE noski.typ = typy.typ; ";
+		$com = "SELECT noski.id, noski.nazwa, noski.cena, noski.foto, typy.typ, typy.opis FROM noski, typy WHERE noski.typ = typy.typ ORDER BY noski.id DESC LIMIT 5; ";
 		$casd = mysqli_query($conn, $com);
 		
 		while ($row = mysqli_fetch_assoc($casd)) {
 
 			echo 
 			"
+			<a class='to' href='insert.php?id=".$row['id']."'>
 				<div class='tow'>
 					
 					<img src='".$row['foto']."'>
@@ -147,9 +101,10 @@
 						<h1 style='font-size: 30px;'>".$row['nazwa']."</h1>
 						<p>Typ:".$row['typ']."</p>
 						<p>Cena:".$row['cena']."$</p>
-						<a href='insert.php?id=".$row['id']."'><input type='submit' value='Zamów'></a>
+						
 					</div>
 				</div>
+			</a>
 			"
 			;
 		}
@@ -159,26 +114,29 @@
 
 
 	</article>
+	<br>
+	<h1 class="nag"><a href="">Więcej</a></h1>
+	<br>
 	<footer id="stop">
+		
+		<div class="fot1">
 			
-			<div class="fot1">
-				
-				<h1>O nas</h1>
-				<br>
-				<p>Jesteśmy firmą z Karpat. Produkujemy najlepsze skarpetki na całą Urkainę. Nasze skarpetki mogą wytrzymać bombę.</p>
-				<br>
-				<h2>Kontakt:</h2><a href="#">skarpetkikarpaty@gmail.com</a>
+			<h1>O nas</h1>
+			<br>
+			<p>Jesteśmy firmą z Karpat. Produkujemy najlepsze skarpetki na całą Urkainę. Nasze skarpetki mogą wytrzymać bombę.</p>
+			<br>
+			<h2>Kontakt:</h2><a href="#">skarpetkikarpaty@gmail.com</a>
 
-			</div>
-			<div class="fot2">
-				
-				<h1>Wsparcie</h1>
-				<br>
-				<p>Jak masz jakiś problem to możesz napisać do naszego specjalisty Wiktora, który ci pomoże, ale jak powiesz coś złego. To ciebie wyżucimy do kanały.</p>
-				<br>
-				<h2>Cpyright&copy Nosky Karpaty Interprice 2023</h2>
+		</div>
+		<div class="fot2">
+			
+			<h1>Wsparcie</h1>
+			<br>
+			<p>Jak masz jakiś problem to możesz napisać do naszego specjalisty Wiktora.</p>
+			<br>
+			<h2>Cpyright&copy Nosky Karpaty Interprice 2023</h2>
 
-			</div>
+		</div>
 
 	</footer>
 
