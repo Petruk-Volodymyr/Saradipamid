@@ -34,7 +34,7 @@ header>.menu1>p{
 header>.menu2{
 	width: 58%;
 	height: 100%;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 header>.menu2>a{
 	margin-top: auto;
@@ -46,6 +46,7 @@ header>.menu3{
 }
 header>.menu3>.log{
 	float: right;
+	cursor: pointer;
 }
 /*sekcja witryby*/
 #witr{
@@ -111,28 +112,30 @@ header>.menu3>.log{
 }
 .lal>.buba>.beba{
 	display: flex;
+	flex-direction: column;
 	margin: auto;
-	background-color: #382D25;
+	background-color: #D7D7D7;
 	width: 50%;
 	height: 70%;
 	border-radius: 20px;
 	padding: 2%;
 	text-align: center;
 }
-.lal>.buba>.beba>iframe{
-	display: flex;
+.lal>.buba>.beba>form{
+	width: 50%;
+	height: 50%;
 	margin: auto;
-	width: 90%;
-	height: 90%;
-	border-radius: 15px;
 }
-.lal>.buba>.beba>img{
-	display: flex;
-	margin: auto;
-	width: 10px;
-	height: 10px;
-	position: inherit;
-	bottom: 0;
+.lal>.buba>.beba>form>input{
+	margin: 10px;
+	outline: none;
+	border-radius: 10px;
+	padding: 1%;
+	border: none;
+}
+.lal>.buba>.beba>form>input[type="submit"]{
+	background-color: #F6AE24;
+	cursor: pointer;
 }
 /*towar*/
 .nag>p{

@@ -1,6 +1,6 @@
 <?php 
 
-		$conn = mysqli_connect('localhost', 'root', '', 'saradipamid');
+		require_once"connect.php";
 		$ide = $_GET['id'];
 		$poc = "SELECT * FROM noski, typy WHERE noski.id=$ide and noski.typ = typy.typ;";
 		$opo = mysqli_query($conn, $poc);

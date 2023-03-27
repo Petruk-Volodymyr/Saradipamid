@@ -1,3 +1,10 @@
+<?php 
+
+	require_once"connect.php";
+	$com = "SELECT noski.id, noski.nazwa, noski.cena, noski.foto, typy.typ, typy.opis FROM noski, typy WHERE noski.typ = typy.typ ORDER BY noski.id DESC LIMIT 5; ";
+	$casd = mysqli_query($conn, $com);
+
+?>
 <!DOCTYPE html>
 <html lang="pl-PL">
 <head>
@@ -8,12 +15,11 @@
 </head>
 <body>
 	<div class="lal">
-		<div class="buba" onclick="of()">
+		<div class="buba">
 
 			<div class="beba">
-				
-				
-
+								
+				<h1 style="cursor: pointer;" onclick="of()">&#10006;</h1>
 
 			</div>
 		</div>
@@ -36,14 +42,13 @@
 		</div>
 		<div class="menu menu2">
 			
-			<a href="#otz">Komentarze</a>
 			<a href="#towar">Towary</a>
 			<a href="#stop">O nas</a>
 
 		</div>
 		<div class="menu menu3">
 			
-			<div class="log"><a href=""><img src="img/BBD/profile.png" alt=""></a></div>
+			<div class="log"><a target="_blank" href="login.php"><img src="img/BBD/profile.png" alt=""></a></div>
 
 		</div>
 
@@ -62,7 +67,7 @@
 					<p style="color: #433D29;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic quae dolorem, commodi. Recusandae iusto, temporibus est quia, labore, enim voluptatem facere nostrum dicta quos laborum laudantium, maiores doloremque natus odit.
 					Earum tempore officiis, ratione temporibus omnis accusantium natus, iure assumenda ipsum ducimus iusto perspiciatis id quaerat, esse placeat qui voluptate, sunt ullam. Ullam deleniti, adipisci incidunt odit eaque, repudiandae eligendi!</p>
 					<br>
-					<button class="knopka1" onclick="on()">
+					<button class="knopka1">
 						► Ogarni filmik
 					</button>
 					<button class="knopka2">
@@ -85,10 +90,6 @@
 		
 		<?php 
 
-		$conn = mysqli_connect('localhost', 'root', '', 'saradipamid');
-		$com = "SELECT noski.id, noski.nazwa, noski.cena, noski.foto, typy.typ, typy.opis FROM noski, typy WHERE noski.typ = typy.typ ORDER BY noski.id DESC LIMIT 5; ";
-		$casd = mysqli_query($conn, $com);
-		
 		while ($row = mysqli_fetch_assoc($casd)) {
 
 			echo 
