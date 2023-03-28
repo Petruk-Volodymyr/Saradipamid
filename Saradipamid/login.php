@@ -1,6 +1,9 @@
 <?php 
-
+	
 	require_once"connect.php";
+	if (@$_SESSION['user']) {
+		header('Location:index.php');
+	}
 	if (!$conn) {
 		echo "Baza zdechła";
 	}
@@ -14,13 +17,27 @@
 	<title>Zaloguj</title>
 	<link rel="stylesheet" href="style1.css">
 </head>
+
 <body>
+	<a class="pow" href="index.php">&#8592;Powrót</a>
 	<div>
+
 		<form action="vendor/sclogin.php" method="POST">
 			<input name="logi" type="text" placeholder="Login"><br>
 			<input name="hasl" type="password" placeholder="Hasło"><br>
 			<input type="submit" value="Zaloguj"><br><br>
-			<p>Nie masz konta?-<a href="signup.php">załóż konto</a>!</p>	
+			<p>Nie masz konta?-<a href="signup.php">załóż konto</a>!</p><br><br>
+				
+			<?php
+			
+				if (@$_SESSION['wrongloging']) {
+					echo "<p>".@$_SESSION['wrongloging']."</p>";
+				}
+				unset($_SESSION['wrongloging']);
+				
+				
+			?>
+
 		</form>
 	</div>
 	

@@ -17,7 +17,7 @@
 	<link rel="stylesheet" href="styl_inse.css">
 </head>
 <body>
-		<header>
+	<header>
 		
 		<div class="menu menu1">
 			

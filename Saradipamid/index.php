@@ -1,5 +1,4 @@
 <?php 
-
 	require_once"connect.php";
 	$com = "SELECT noski.id, noski.nazwa, noski.cena, noski.foto, typy.typ, typy.opis FROM noski, typy WHERE noski.typ = typy.typ ORDER BY noski.id DESC LIMIT 5; ";
 	$casd = mysqli_query($conn, $com);
@@ -14,6 +13,11 @@
 	
 </head>
 <body>
+<!-- 	<h1><?= @$_SESSION['user']['imie'] ?></h1>
+	<h1><?= @$_SESSION['user']['nazwisko'] ?></h1>
+	<h3><?= @$_SESSION['user']['login'] ?></h3>
+	<h4><?= @$_SESSION['user']['email'] ?></h4>
+	<a href="vendor/logout.php">Wyloguj</a> -->
 	<div class="lal">
 		<div class="buba">
 
@@ -48,7 +52,26 @@
 		</div>
 		<div class="menu menu3">
 			
-			<div class="log"><a target="_blank" href="login.php"><img src="img/BBD/profile.png" alt=""></a></div>
+			<div class="log">
+				<?php 
+
+				if (@$_SESSION['user']) {
+					echo "
+
+					<a href='profile.php' style='text-decoration: none;'>Witaj ".@$_SESSION['user']['imie']."</a>
+
+					";
+				}else {
+					echo "
+						<a href='login.php'>
+							<img src='img/BBD/profile.png' alt=''>
+						</a> 
+				";
+				}
+
+				?>
+				
+			</div>
 
 		</div>
 

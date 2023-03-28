@@ -1,9 +1,9 @@
 <?php 
-
-	session_start();
 	
 	require_once"connect.php";
-
+	if (@$_SESSION['user']) {
+		header('Location:index.php');
+	}
 	if (!$conn) {
 		echo "Baza zdechła";
 	}
@@ -19,16 +19,17 @@
 	<link rel="stylesheet" href="style1.css">
 </head>
 <body>
+	<a class="pow" href="login.php">&#8592;Powrót</a>
 	<div>
 		<form action="vendor/scsignup.php" method="POST">
-			<input name="imie" type="text" placeholder="Imię" required><br>
-			<input name="nazw" type="text" placeholder="Nazwisko" required><br>
-			<input name="logi" type="text" placeholder="Login" required><br>
+			<input name="imie" type="text" placeholder="Imię" autocomplete="off" required><br>
+			<input name="nazw" type="text" placeholder="Nazwisko" autocomplete="off" required><br>
+			<input name="logi" type="text" placeholder="Login" autocomplete="off" required><br>
 			<input name="mail" type="email" placeholder="Email" required><br>
-			<input name="data" type="date" placeholder="Data" required><br>
-			<input name="pass" type="password" placeholder="Hasło" required><br>
-			<input name="pass-conf" type="password" placeholder="Napisz ponownie hasło" required><br>
-			<input type="submit" value="Zarejstruj"><br><br>
+			<input name="data" min="1900-01-01" type="date" placeholder="Data" required><br>
+			<input name="pass" type="password" placeholder="Hasło" autocomplete="off" required><br>
+			<input name="pass-conf" type="password" placeholder="Napisz ponownie hasło" autocomplete="off" required><br>
+			<input name="sub" type="submit" value="Zarejstruj"><br><br>
 			<?php
 			
 			if (@$_SESSION['wronglog']) {

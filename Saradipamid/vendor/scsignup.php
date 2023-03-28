@@ -1,9 +1,10 @@
 <?php 
-	
-	session_start();
 
 	require_once"../connect.php";
-
+	$sub = $_POST['sub'];
+	if ((@$_SESSION['user']) || (!isset($sub))) {
+		header('Location:index.php');
+	}
 
 ?>
 <!DOCTYPE html>
@@ -22,11 +23,12 @@
 	$data = $_POST['data'];
 	$has = $_POST['pass'];
 	$phas = $_POST['pass-conf'];
-	$sql = mysqli_query($conn, "SELECT `login` FROM `users` WHERE `login` = '$log'");
+	$sql = mysqli_query($conn, "SELECT * FROM `users` WHERE `login` = '$log' OR `email` = '$mail'");
 	$row = mysqli_fetch_assoc($sql);
 	$logos = $row['login'];
-	if ($log === $logos) {
-		$_SESSION['wronglog'] = 'Login jest zajęty';
+	$mailo = $row['email'];
+	if (($log === $logos) || ($mail === $mailo)) {
+		$_SESSION['wronglog'] = 'Login lub poczta jest zajęta';
 		header('Location: ../signup.php');
 	}else {
 		if ($has === $phas) {

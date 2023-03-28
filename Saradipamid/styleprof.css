@@ -4,8 +4,15 @@
 	font-size: 24px;
 	color: #252525;
 }
+html{
+	height: 100%;
+  	box-sizing: border-box;
+}
 body{
 	background-color: #EFF5F9;
+	position: relative;
+	margin: 0;
+ 	min-height: 100%;
 }
 h1{
 	font-size: 30px;
@@ -42,62 +49,31 @@ header>.menu2>a{
 	text-decoration: none;
 	
 }
-/*Towar*/
-
-
+/*profil*/
 article{
 	width: 100%;
-}
-article>div{
-	float: left;
-	width: 48%;
-	padding: 1%;
+	height: 50vh;
 	display: flex;
-	min-height: 752px;
+	justify-content: center;
+	align-items: center;
 }
-article>div>img{
-	width: 50%;
-	margin-left: auto;
-	margin-right: auto;
+article>.profil{
+	width: 25%;
+	padding: 1%;
+	background-color: #d7d7d7;
+	border: 1px solid black;
 }
-article>div>.oczko{
-	width: 100%;
-	margin-top: 15%;
+article>.profil>div:first-child{
+	display: flex;
+	align-items: center;
 }
-article>div>.oczko>.typ, .cena{
-	width: 43%;
-	padding: 3%;
-	float: left;
-	background-color: #E8EEF1;
-	border: .2px #252525 solid;
+article>.profil>div:last-child>a{
+	text-decoration: none;
 	border-radius: 10px;
-}
-article>div>.oczko>.cena{
+	padding: 1%;
+	border: 2px solid #821115;
 	float: right;
 }
-article>div>.oczko>p{
-	text-align: center;
-}
-article>.type2>.oczko>.opis{
-	float: left;
-	margin-top: 5%;
-	background-color: #FEDE75;
-		padding: 2%;
-	border-radius: 10px;
-}
-article>.type2>h1{
-	font-size: 30px;
-}
-article>div>.oczko>p>input{
-	border: none;
-	padding: 2%;
-	border-radius: 10px;
-	margin-top: 5%;
-	color: #E8EEF1;
-	background-color: #252525;
-}
-
-
 /*stopka*/
 footer{
 	width: 100%;

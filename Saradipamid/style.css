@@ -4,8 +4,14 @@
 	font-size: 24px;
 	color: #252525;
 }
+html{
+	height: 100%;
+  	box-sizing: border-box;
+}
 body{
 	background-color: #EFF5F9;
+	position: relative;
+ 	min-height: 100%;
 }
 h1{
 	font-size: 30px;
@@ -42,12 +48,13 @@ header>.menu2>a{
 	text-decoration: none;
 }
 header>.menu3{
-	display: block;
+	justify-content: right;
+	align-items: center;
 }
 header>.menu3>.log{
 	float: right;
-	cursor: pointer;
 }
+
 /*sekcja witryby*/
 #witr{
 	width: 100%;
@@ -185,9 +192,10 @@ header>.menu3>.log{
 /*stopka*/
 footer{
 	width: 100%;
-	
 	position: inherit;
+	right: 0;
 	bottom: 0;
+	left: 0;
 	background-color: #E8EEF1;
 	display: flex;
 	justify-content: center;

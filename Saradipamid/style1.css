@@ -1,39 +1,66 @@
-		*{
-			margin: 0;
-			padding: 0;
-			color: #252525;
-		}
-		body{
-			height: 100vh;
-			width: 100%;
-			display: flex;
-			background-color: #d7d7d7;
-		}
-		div{
-			width: 50%;
-			height: 50%;
-			margin: auto;
-			display: flex;
-		}
-		form{
-			width: 50%;
-			background-color: #918e8e;
-			display: flex;
-			align-items: center;
-			flex-direction: column;
-			margin: auto;
-			border-radius: 10px;
-		}
-		form>input{
-			margin: 10px;
-			outline: none;
-			border-radius: 10px;
-			padding: 3%;
-			border: none;
-			width: 70%;
-		}
-		form>input[type="submit"]{
-			background-color: #F6AE24;
-			cursor: pointer;
-			width: 40%;
-		}
+*{
+	margin: 0;
+	padding: 0;
+	color: #252525;
+}
+html{
+	height: 100%;
+  	box-sizing: border-box;
+}
+body{
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	background-color: #EFF5F9;
+	flex-direction: column;
+	position: relative;
+	margin: 0;
+ 	min-height: 100%;
+}
+.pow{
+	background-color: #d7d7d7;
+	border: 1px solid black;
+	padding: 1%;
+	border-radius: 10px;
+	text-decoration: none;
+	position: absolute;
+	margin: 10px;
+}
+div{
+	width: 50%;
+	height: 50%;
+	margin: auto;
+	display: flex;
+}
+form{
+	width: 50%;
+	background-color: #918e8e;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin: auto;
+	border-radius: 10px;
+}
+form>input{
+	margin: 10px;
+	outline: none;
+	border-radius: 10px;
+	padding: 3%;
+	border: none;
+	width: 70%;
+}
+form>input[name="imie"], input[name="nazw"]{
+	text-transform: capitalize;
+}
+form>input[type="submit"]{
+	background-color: #F6AE24;
+	cursor: pointer;
+	width: 40%;
+}
+form>p:last-child{
+	border: 3px solid #821115;
+	padding: 3%;
+	font-size: 25px;
+	font-weight: bold;
+	border-radius: 10px;
+}
