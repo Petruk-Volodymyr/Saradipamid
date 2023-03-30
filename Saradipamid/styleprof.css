@@ -52,16 +52,20 @@ header>.menu2>a{
 /*profil*/
 article{
 	width: 100%;
-	height: 50vh;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
-article>.profil{
-	width: 25%;
+article>div{
+	border-radius: 10px;
 	padding: 1%;
+	margin: 1%;
 	background-color: #d7d7d7;
 	border: 1px solid black;
+}
+article>.profil{
+	width: 25%;
 }
 article>.profil>div:first-child{
 	display: flex;
@@ -74,9 +78,28 @@ article>.profil>div:last-child>a{
 	border: 2px solid #821115;
 	float: right;
 }
+article>.profil>div:last-child>a:hover{
+	transform: scale(1.02);
+	background-color: #821115;
+	color: #d7d7d7;
+}
+article>.historia{
+	width: 50%;
+}
+article>.historia>table{
+	width: 100%;
+}
+article>.historia>table>tr, th, td{
+	border: 1px solid #000;
+	text-align: center;
+}
+article>.historia>table>tr, th{
+	background-color: #F6AE24;
+}
 /*stopka*/
 footer{
 	width: 100%;
+	
 	position: absolute;
 	right: 0;
 	bottom: 0;
@@ -88,6 +111,7 @@ footer{
 footer>div{
 	width: 40%;
 	padding: 2%;
+	background-color: #E8EEF1;
 }
 footer>div>h1{
 	text-align: center;

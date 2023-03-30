@@ -27,7 +27,7 @@
 			<input name="logi" type="text" placeholder="Login" autocomplete="off" required><br>
 			<input name="mail" type="email" placeholder="Email" required><br>
 			<input name="data" min="1900-01-01" type="date" placeholder="Data" required><br>
-			<input name="pass" type="password" placeholder="Hasło" autocomplete="off" required><br>
+			<input name="pass" type="password" placeholder="Hasło" autocomplete="off" minlength="8" required><br>
 			<input name="pass-conf" type="password" placeholder="Napisz ponownie hasło" autocomplete="off" required><br>
 			<input name="sub" type="submit" value="Zarejstruj"><br><br>
 			<?php

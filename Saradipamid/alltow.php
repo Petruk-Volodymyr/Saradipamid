@@ -1,6 +1,6 @@
 <?php 
 	require_once"connect.php";
-	$com = "SELECT noski.id, noski.nazwa, noski.cena, noski.foto, typy.typ, typy.opis FROM noski, typy WHERE noski.typ = typy.typ ORDER BY noski.id DESC LIMIT 5; ";
+	$com = "SELECT noski.id, noski.nazwa, noski.cena, noski.foto, typy.typ, typy.opis FROM noski, typy WHERE noski.typ = typy.typ ORDER BY noski.id DESC; ";
 	$casd = mysqli_query($conn, $com);
 
 ?>
@@ -22,7 +22,7 @@
 		</div>
 		<div class="menu menu2">
 			
-			<a href='alltow.php'>Towary</a>
+			<a href="#towar">Towary</a>
 			<a href="#stop">O nas</a>
 
 		</div>
@@ -52,29 +52,6 @@
 		</div>
 
 	</header>
-	<br>
-	<article id="witr">
-		
-		<section>
-			
-			<div>
-				
-				<div>
-					
-					<h1 style=" color: #433D29;font-size: 30px;">Bardzo dorbe skarpetki.<br>Kupuj teraz i będzie ci dobrze.</h1>
-					<br>
-					<p style="color: #433D29;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic quae dolorem, commodi. Recusandae iusto, temporibus est quia, labore, enim voluptatem facere nostrum dicta quos laborum laudantium, maiores doloremque natus odit.
-					Earum tempore officiis, ratione temporibus omnis accusantium natus, iure assumenda ipsum ducimus iusto perspiciatis id quaerat, esse placeat qui voluptate, sunt ullam. Ullam deleniti, adipisci incidunt odit eaque, repudiandae eligendi!</p>
-
-				</div>
-
-			</div>
-
-		</section>
-
-	</article>
-	<br>
-	<h1 class="nag"><p>Ostatnie towary</p></h1>
 	<br>
 	<article id="towar">
 
@@ -107,8 +84,6 @@
 
 
 	</article>
-	<br>
-	<h1 class="nag"><a href="alltow.php">Więcej</a></h1>
 	<br>
 	<footer id="stop">
 		

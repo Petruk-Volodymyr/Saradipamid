@@ -1,8 +1,10 @@
-<?php 
-	session_start();
+<?php
+	require_once"connect.php";
 	if (!$_SESSION['user']) {
 		header('location:index.php');
 	}
+	$prof = @$_SESSION['user']['id'];
+	$sql = mysqli_query($conn, "SELECT zamowienia.id_zam, noski.nazwa, zamowienia.gdzie, zamowienia.dataczas FROM `zamowienia`, `users`, `noski` WHERE zamowienia.id_klienta = '$prof' AND zamowienia.id_tow = noski.id GROUP BY id_zam DESC; ");
 ?>
 <!DOCTYPE html>
 <html lang="pl-PL">
@@ -29,11 +31,6 @@
 
 	</header>
 	<hr>
-<!-- 		<h1><?= @$_SESSION['user']['imie'] ?></h1>
-	<h1><?= @$_SESSION['user']['nazwisko'] ?></h1>
-	<h3><?= @$_SESSION['user']['login'] ?></h3>
-	<h4><?= @$_SESSION['user']['email'] ?></h4>
-	<a href="vendor/logout.php">Wyloguj</a> -->
 	<article>
 		
 		<div class="profil">
@@ -52,9 +49,55 @@
 			</div>
 
 		</div>
+		<br>
+		<div class="historia">
+			<h1>Historia zamówień:</h1>
+			<br>
+			<table>
+				
+				<?php
+
+				if (mysqli_num_rows($sql)<1) {
+					echo "Nie robiłeś zakup, no morzesz <a href='alltow.php'>zaciąć</a>!";
+				}else {
+					echo "
+					<tr>
+						<th>Nazwa</th>
+						<th>Adres</th>
+						<th>Data zamówienia</th>
+					</tr>
+					";
+					while ($row = mysqli_fetch_assoc($sql)) {
+					echo "
+						<tr>
+							<td>".$row['nazwa']."</td>
+							<td>".$row['gdzie']."</td>
+							<td>".$row['dataczas']."</td>
+						</tr> 
+					";
+					}
+				}
+				
+
+				?>
+				
+
+			</table>
+
+		</div>
 
 	</article>
+	<br>
+	<br>
+	<br>
 	<!-- stoka -->
+	<?php 
+
+	for ($i=1; $i <= 10; $i++) { 
+		echo "<br>";
+	}
+
+	?>
 	<footer id="stop">
 		
 		<div class="fot1">

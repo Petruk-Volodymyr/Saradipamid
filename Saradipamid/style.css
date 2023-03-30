@@ -54,7 +54,9 @@ header>.menu3{
 header>.menu3>.log{
 	float: right;
 }
-
+header>.menu3>.log>a>img:hover{
+	transform: scale(1.02);
+}
 /*sekcja witryby*/
 #witr{
 	width: 100%;
@@ -78,72 +80,6 @@ header>.menu3>.log{
 	margin-top: 20%;
 	
 }
-#witr>section>div>div>button{
-	border-radius: 25px;
-	border: none;
-}
-#witr>section>div>div>.knopka1{
-	width: 62%;
-	padding: 3%;
-	border-radius: 30px;
-	background-color: #F6AE24;
-}
-#witr>section>div>div>button:hover{
-	cursor: pointer;
-}
-#witr>section>div>div>.knopka1:hover{
-	background-color: #DD9B1F;
-}
-#witr>section>div>div>.knopka2{
-	width: 33%;
-	padding: 2%;
-	background-color: #ECF0F4;
-}
-#witr>section>div>div>.knopka2:hover{
-	background-color: #DEE2E5;
-}
-.lal{
-	display: none;
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, .5);
-	left: 0;
-	top: 0;
-	z-index: 2;
-}
-.lal>.buba{
-	display: flex;
-	width: 100%;
-	height: 100%;
-}
-.lal>.buba>.beba{
-	display: flex;
-	flex-direction: column;
-	margin: auto;
-	background-color: #D7D7D7;
-	width: 50%;
-	height: 70%;
-	border-radius: 20px;
-	padding: 2%;
-	text-align: center;
-}
-.lal>.buba>.beba>form{
-	width: 50%;
-	height: 50%;
-	margin: auto;
-}
-.lal>.buba>.beba>form>input{
-	margin: 10px;
-	outline: none;
-	border-radius: 10px;
-	padding: 1%;
-	border: none;
-}
-.lal>.buba>.beba>form>input[type="submit"]{
-	background-color: #F6AE24;
-	cursor: pointer;
-}
 /*towar*/
 .nag>p{
 	padding: 1%;
@@ -163,20 +99,26 @@ header>.menu3>.log{
 	margin-right: auto;
 	border-radius: 10px;
 	width: 10%;
-	border: 1px solid #252525;
+	background-color: #f6ae24;
 	text-decoration: none;
+}
+.nag>a:hover{
+	background-color: #d09b1f;
+	transform: scale(1.02);
 }
 #towar{
 	width: 100%;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	flex-wrap: wrap;
 }
 #towar>.to{
+	margin: 1%;
 	width: 18%;
 	text-decoration: none;
 	border-radius: 10px;
 	background-color: #E8EEF1;
+	box-shadow: 0px 0px 13px -5px rgba(66, 68, 90, 1);
 }
 #towar>.to>.tow>div{
 	width: 98%;
