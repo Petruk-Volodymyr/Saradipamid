@@ -1,5 +1,6 @@
 <?php 
 	require_once"../connect.php";
+	// Funkcja loginu
 	if (@$_SESSION['user']) {
 		header('location:index.php');
 	}

@@ -32,7 +32,6 @@
 		header('Location: ../signup.php');
 	}else {
 		if ($has === $phas) {
-			echo "string";
 		
 		$has = md5($has);
 		$reg = mysqli_query($conn, "INSERT INTO `users` (`id`, `imie`, `nazwisko`, `login`, `haslo`, `email`, `wiek`) VALUES (NULL, '$imie', '$nazw', '$log', '$has', '$mail', '$data') ");

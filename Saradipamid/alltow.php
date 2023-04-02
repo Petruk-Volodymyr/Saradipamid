@@ -1,7 +1,8 @@
 <?php 
 	require_once"connect.php";
-	$com = "SELECT noski.id, noski.nazwa, noski.cena, noski.foto, typy.typ, typy.opis FROM noski, typy WHERE noski.typ = typy.typ ORDER BY noski.id DESC; ";
+	$com = "SELECT noski.id, noski.nazwa, noski.cena, noski.foto, typy.typ, typy.opis FROM noski, typy WHERE noski.typ = typy.typ ORDER BY noski.id DESC LIMIT 5; ";
 	$casd = mysqli_query($conn, $com);
+	$ile = mysqli_query($conn, "SELECT id FROM noski;");
 
 ?>
 <!DOCTYPE html>
@@ -13,19 +14,22 @@
 	
 </head>
 <body>
+	<!-- Nagłówek -->
 	<header>
-		
+		<!-- Logo firmy -->
 		<div class="menu menu1">
 			
 			<p><a style="font-size: 30px; text-decoration: none;" href="index.php">Saradipamid</a></p>
 
 		</div>
+		<!-- Wspomagające przeciski -->
 		<div class="menu menu2">
 			
 			<a href="#towar">Towary</a>
 			<a href="#stop">O nas</a>
 
 		</div>
+		<!-- Login -->
 		<div class="menu menu3">
 			
 			<div class="log">
@@ -53,6 +57,7 @@
 
 	</header>
 	<br>
+	<!-- Wszystkie towary -->
 	<article id="towar">
 
 
@@ -81,10 +86,17 @@
 
 		?>
 
+		<?php 
 
+		for ($i=1; $i <= ceil(mysqli_num_rows($ile)/5); $i++) { 
+			echo $i." ";
+		}
+
+		?>
 
 	</article>
 	<br>
+	<!-- Stopka -->
 	<footer id="stop">
 		
 		<div class="fot1">
@@ -110,3 +122,8 @@
 
 </body>
 </html>
+<?php 
+
+ mysqli_close($conn)
+
+?>

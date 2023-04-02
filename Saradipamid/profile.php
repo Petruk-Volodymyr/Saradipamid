@@ -53,10 +53,11 @@
 		<div class="historia">
 			<h1>Historia zamówień:</h1>
 			<br>
+			<!-- Historia zamówień -->
 			<table>
 				
 				<?php
-
+				// Sprawdzanie ilości towaru
 				if (mysqli_num_rows($sql)<1) {
 					echo "Nie robiłeś zakup, no morzesz <a href='alltow.php'>zaciąć</a>!";
 				}else {
@@ -90,7 +91,7 @@
 	<br>
 	<br>
 	<br>
-	<!-- stoka -->
+	<!-- stopka -->
 	<?php 
 
 	for ($i=1; $i <= 10; $i++) { 
@@ -123,3 +124,8 @@
 
 </body>
 </html>
+<?php 
+
+ mysqli_close($conn)
+
+?>

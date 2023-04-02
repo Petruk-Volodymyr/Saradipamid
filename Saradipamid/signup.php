@@ -21,6 +21,7 @@
 <body>
 	<a class="pow" href="login.php">&#8592;Powrót</a>
 	<div>
+	<!-- Formularz rejestracyjny -->
 		<form action="vendor/scsignup.php" method="POST">
 			<input name="imie" type="text" placeholder="Imię" autocomplete="off" required><br>
 			<input name="nazw" type="text" placeholder="Nazwisko" autocomplete="off" required><br>
@@ -50,3 +51,8 @@
 
 </body>
 </html>
+<?php 
+
+ mysqli_close($conn)
+
+?>

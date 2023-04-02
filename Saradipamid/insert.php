@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="styl_inse.css">
 </head>
 <body>
+	<!-- Formularz zamówienia -->
 	<div class="lal">
 		<div class="buba">
 
@@ -50,19 +51,22 @@
 		}
 
 	</script>
+	<!-- Nagłówek -->
 	<header>
-		
+		<!-- Logo firmy -->
 		<div class="menu menu1">
 			
 			<p><a style="font-size: 30px; text-decoration: none;" href="index.php">Saradipamid</a></p>
 
 		</div>
+		<!-- Wspomagające przeciski -->
 		<div class="menu menu2">
 			
 			<a href="#stop">O nas</a>
 
 		</div>
-				<div class="menu menu3">
+		<!-- Login -->
+		<div class="menu menu3">
 			
 			<div class="log">
 				<?php 
@@ -88,6 +92,7 @@
 		</div>
 
 	</header>
+	<!-- Towar -->
 	<hr>
 	<?php
 	echo "		
@@ -126,7 +131,8 @@
 	 ?>
 
 
-	 <br>
+	<br>
+	<!-- Stopka -->
 	<footer id="stop">
 		
 		<div class="fot1">
@@ -155,4 +161,4 @@
 
  mysqli_close($conn)
 
- ?>
+?>

@@ -13,19 +13,22 @@
 	
 </head>
 <body>
+	<!-- Nagłówek -->
 	<header>
-		
+		<!-- Logo firmy -->
 		<div class="menu menu1">
 			
 			<p><a style="font-size: 30px; text-decoration: none;" href="index.php">Saradipamid</a></p>
 
 		</div>
+		<!-- Wspomagające przeciski -->
 		<div class="menu menu2">
 			
 			<a href='alltow.php'>Towary</a>
 			<a href="#stop">O nas</a>
 
 		</div>
+		<!-- Login -->
 		<div class="menu menu3">
 			
 			<div class="log">
@@ -53,6 +56,7 @@
 
 	</header>
 	<br>
+	<!-- Witryna -->
 	<article id="witr">
 		
 		<section>
@@ -76,6 +80,7 @@
 	<br>
 	<h1 class="nag"><p>Ostatnie towary</p></h1>
 	<br>
+	<!-- Ostatnie towary -->
 	<article id="towar">
 
 
@@ -108,8 +113,10 @@
 
 	</article>
 	<br>
+	<!-- Zobaczyć wszystkie towary -->
 	<h1 class="nag"><a href="alltow.php">Więcej</a></h1>
 	<br>
+	<!-- Stopka -->
 	<footer id="stop">
 		
 		<div class="fot1">
@@ -135,3 +142,8 @@
 
 </body>
 </html>
+<?php 
+
+ mysqli_close($conn)
+
+?>

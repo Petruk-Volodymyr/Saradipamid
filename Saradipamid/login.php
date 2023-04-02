@@ -1,11 +1,9 @@
 <?php 
 	
 	require_once"connect.php";
+	// Sprawdzanie istnienia urzytkownika
 	if (@$_SESSION['user']) {
 		header('Location:index.php');
-	}
-	if (!$conn) {
-		echo "Baza zdechła";
 	}
 
 ?>
@@ -19,9 +17,10 @@
 </head>
 
 <body>
+	<!-- Przycisk dla powrtu na stronę -->
 	<a class="pow" href="index.php">&#8592;Powrót</a>
 	<div>
-
+		<!-- Formularz loginu -->
 		<form action="vendor/sclogin.php" method="POST">
 			<input name="logi" type="text" placeholder="Login"><br>
 			<input name="hasl" type="password" placeholder="Hasło"><br>
@@ -29,7 +28,7 @@
 			<p>Nie masz konta?-<a href="signup.php">załóż konto</a>!</p><br><br>
 				
 			<?php
-			
+				// Problem z loginem
 				if (@$_SESSION['wrongloging']) {
 					echo "<p>".@$_SESSION['wrongloging']."</p>";
 				}
@@ -44,3 +43,8 @@
 
 </body>
 </html>
+<?php 
+
+ mysqli_close($conn)
+
+?>
