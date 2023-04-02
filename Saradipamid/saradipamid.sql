@@ -31,7 +31,7 @@ CREATE TABLE `noski` (
   PRIMARY KEY (`id`),
   KEY `tym` (`typ`),
   CONSTRAINT `noski_ibfk_1` FOREIGN KEY (`typ`) REFERENCES `typy` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `noski` (
 
 LOCK TABLES `noski` WRITE;
 /*!40000 ALTER TABLE `noski` DISABLE KEYS */;
-INSERT INTO `noski` VALUES (1,'Olisza',1,32,'img/BD/1.png'),(2,'Omka',2,42,'img/BD/2.png'),(3,'Lukoi',4,32,'img/BD/3.png'),(4,'Żmych',4,40,'img/BD/4.png'),(5,'Okam',3,60,'img/BD/5.png'),(6,'Okam',3,60,'img/BD/5.png'),(7,'Okam',3,60,'img/BD/5.png');
+INSERT INTO `noski` VALUES (1,'Olisza',1,32,'img/BD/1.png'),(2,'Omka',2,42,'img/BD/2.png'),(3,'Lukoi',4,32,'img/BD/3.png'),(4,'Żmych',4,40,'img/BD/4.png'),(5,'Okam',3,60,'img/BD/5.png'),(6,'Umal',4,100,'img/BD/6.png'),(7,'OLik',2,20,'img/BD/7.png'),(8,'Emul',1,11,'img/BD/8.png'),(9,'Iluk',4,39,'img/BD/9.png'),(10,'Liko',3,19,'img/BD/10.png'),(11,'Polis',2,299,'img/BD/11.png'),(12,'Emip',1,129,'img/BD/12.png');
 /*!40000 ALTER TABLE `noski` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -117,7 +117,7 @@ CREATE TABLE `zamowienia` (
   KEY `id_klienta` (`id_klienta`),
   CONSTRAINT `zamowienia_ibfk_1` FOREIGN KEY (`id_tow`) REFERENCES `noski` (`id`),
   CONSTRAINT `zamowienia_ibfk_2` FOREIGN KEY (`id_klienta`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -126,7 +126,7 @@ CREATE TABLE `zamowienia` (
 
 LOCK TABLES `zamowienia` WRITE;
 /*!40000 ALTER TABLE `zamowienia` DISABLE KEYS */;
-INSERT INTO `zamowienia` VALUES (1,5,2,'kijany 19B','2023-03-30 17:40:53'),(2,3,2,'Lublin 17a','2023-03-30 17:41:03'),(3,7,1,'Lupok 17','2023-03-30 17:42:00'),(4,3,1,'Aluk 11B','2023-03-30 17:42:07'),(5,3,2,'kijany 19A','2023-03-30 18:02:52'),(6,1,2,'Kijany 10','2023-03-30 18:02:59'),(7,7,2,'Jawisz 17B','2023-03-30 18:03:08');
+INSERT INTO `zamowienia` VALUES (1,5,2,'kijany 19B','2023-03-30 17:40:53'),(2,3,2,'Lublin 17a','2023-03-30 17:41:03'),(3,7,1,'Lupok 17','2023-03-30 17:42:00'),(4,3,1,'Aluk 11B','2023-03-30 17:42:07'),(5,3,2,'kijany 19A','2023-03-30 18:02:52'),(6,1,2,'Kijany 10','2023-03-30 18:02:59'),(7,7,2,'Jawisz 17B','2023-03-30 18:03:08'),(8,1,4,'Kijany 17A','2023-04-02 19:35:49');
 /*!40000 ALTER TABLE `zamowienia` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -139,4 +139,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-04-01 14:45:26
+-- Dump completed on 2023-04-02 21:55:01

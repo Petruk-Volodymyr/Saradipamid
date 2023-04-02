@@ -24,7 +24,7 @@
 		<!-- Wspomagające przeciski -->
 		<div class="menu menu2">
 			
-			<a href='alltow.php'>Towary</a>
+			<a href='alltow.php?page=1'>Towary</a>
 			<a href="#stop">O nas</a>
 
 		</div>
@@ -114,7 +114,7 @@
 	</article>
 	<br>
 	<!-- Zobaczyć wszystkie towary -->
-	<h1 class="nag"><a href="alltow.php">Więcej</a></h1>
+	<h1 class="nag"><a href="alltow.php?page=1">Więcej</a></h1>
 	<br>
 	<!-- Stopka -->
 	<footer id="stop">

@@ -1,9 +1,10 @@
 <?php 
 	require_once"connect.php";
-	$com = "SELECT noski.id, noski.nazwa, noski.cena, noski.foto, typy.typ, typy.opis FROM noski, typy WHERE noski.typ = typy.typ ORDER BY noski.id DESC LIMIT 5; ";
-	$casd = mysqli_query($conn, $com);
 	$ile = mysqli_query($conn, "SELECT id FROM noski;");
-
+	$page = $_GET['page'];
+	$offset = ($page - 1) * 10;
+	$com = "SELECT noski.id, noski.nazwa, noski.cena, noski.foto, typy.typ, typy.opis FROM noski, typy WHERE noski.typ = typy.typ ORDER BY noski.id DESC LIMIT 10 OFFSET $offset; ";
+	$casd = mysqli_query($conn, $com);
 ?>
 <!DOCTYPE html>
 <html lang="pl-PL">
@@ -85,16 +86,21 @@
 		}
 
 		?>
+		
 
-		<?php 
 
-		for ($i=1; $i <= ceil(mysqli_num_rows($ile)/5); $i++) { 
-			echo $i." ";
-		}
+	</article>
+		<select onchange="window.location.href=this.options[this.selectedIndex].value" name="" id="strona">
+			<option value=""><?php echo $page;?></option>
+			<?php 
+
+			for ($i=1; $i <= ceil(mysqli_num_rows($ile)/10); $i++) { 
+				echo "<option value='alltow.php?page=$i'>$i</option>";
+			}
 
 		?>
 
-	</article>
+		</select>
 	<br>
 	<!-- Stopka -->
 	<footer id="stop">

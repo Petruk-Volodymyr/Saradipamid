@@ -59,7 +59,7 @@
 				<?php
 				// Sprawdzanie ilości towaru
 				if (mysqli_num_rows($sql)<1) {
-					echo "Nie robiłeś zakup, no morzesz <a href='alltow.php'>zaciąć</a>!";
+					echo "Nie robiłeś zakup, no morzesz <a href='alltow.php?page=1'>zaciąć</a>!";
 				}else {
 					echo "
 					<tr>
