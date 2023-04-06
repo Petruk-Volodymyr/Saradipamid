@@ -132,6 +132,11 @@
 		 		<br>
 		 		<br>
 		 		<p><input onclick='on()' type='submit' value='Zamów'></p>
+		 		<form method='POST' action='vendor/dodkosz.php'>
+			 		<input type='hidden' name='towar' value='".$ide."'>
+			 		<input type='submit' value='Zamów' name='send'>
+		 		</form>
+		 		
 			</div>
 
 	 	</div>

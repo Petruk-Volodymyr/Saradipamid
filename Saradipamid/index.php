@@ -13,6 +13,7 @@
 	
 </head>
 <body>
+	<a href="kosz.php">kosz</a>
 	<!-- Nagłówek -->
 	<header>
 		<!-- Logo firmy -->
