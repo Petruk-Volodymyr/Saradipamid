@@ -3,8 +3,12 @@
 	$ile = mysqli_query($conn, "SELECT id FROM noski;");
 	$page = $_GET['page'];
 	$offset = ($page - 1) * 10;
+	if ($page < 1) {
+		header('location:alltow.php?page=1');
+	}
 	$com = "SELECT noski.id, noski.nazwa, noski.cena, noski.foto, typy.typ, typy.opis FROM noski, typy WHERE noski.typ = typy.typ ORDER BY noski.id DESC LIMIT 10 OFFSET $offset; ";
 	$casd = mysqli_query($conn, $com);
+
 ?>
 <!DOCTYPE html>
 <html lang="pl-PL">
@@ -60,8 +64,6 @@
 	<br>
 	<!-- Wszystkie towary -->
 	<article id="towar">
-
-
 		
 		<?php 
 
@@ -71,12 +73,15 @@
 			"
 			<a class='to' href='insert.php?id=".$row['id']."'>
 				<div class='tow'>
-					
-					<img src='".$row['foto']."'>
+					<!-- Obraz z bazy danych -->
+					<img src='".$row['foto']."'> 
 					<div>
+					<!-- Nazwa z bazy danych -->
 						<h1 style='font-size: 30px;'>".$row['nazwa']."</h1>
+					<!-- Typ towaru z bazy danych -->
 						<p>Typ:".$row['typ']."</p>
-						<p>Cena:".$row['cena']."$</p>
+					<!-- Cena towaru z bazy danych -->
+						<p>Cena:".$row['cena']."$</p> 
 						
 					</div>
 				</div>
@@ -90,17 +95,36 @@
 
 
 	</article>
+	<!-- Strona z towarem -->
+	<div id="form-str">
+		<?php 
+		$pre = $page - 1;
+		$nxt = $page + 1;
+		$max = ceil(mysqli_num_rows($ile)/10);
+		if ($page<2) {
+			$pre = $page;
+		}
+		if ($page > $max) {
+			header('location:alltow.php?page='.$max.'');
+		}
+		
+		echo "<a href='alltow.php?page=$pre'>&#8249;</a>";
+		
+
+		 ?>
 		<select onchange="window.location.href=this.options[this.selectedIndex].value" name="" id="strona">
 			<option value=""><?php echo $page;?></option>
 			<?php 
-
-			for ($i=1; $i <= ceil(mysqli_num_rows($ile)/10); $i++) { 
+			
+			for ($i=1; $i <= $max; $i++) { 
 				echo "<option value='alltow.php?page=$i'>$i</option>";
 			}
 
 		?>
 
 		</select>
+		<?php echo "<a href='alltow.php?page=$nxt'>&#8250;</a>"; ?>
+	</div>
 	<br>
 	<!-- Stopka -->
 	<footer id="stop">
@@ -125,6 +149,7 @@
 		</div>
 
 	</footer>
+
 
 </body>
 </html>

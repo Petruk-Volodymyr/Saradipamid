@@ -54,8 +54,10 @@ header>.menu3{
 header>.menu3>.log{
 	float: right;
 }
-header>.menu3>.log>a>img:hover{
-	transform: scale(1.02);
+header>.menu3>.log>a{
+	margin-top: auto;
+	margin-bottom: auto;
+	text-decoration: none;
 }
 /*sekcja witryby*/
 #witr{
@@ -109,7 +111,6 @@ header>.menu3>.log>a>img:hover{
 #towar{
 	width: 100%;
 	display: flex;
-	justify-content: center;
 	flex-wrap: wrap;
 }
 #towar>.to{
@@ -136,18 +137,32 @@ header>.menu3>.log>a>img:hover{
 	height: 70%;
 }
 /*Strona towaru*/
-#strona{
-	margin-left: auto;
+#form-str{
 	margin-right: auto;
-	display: block;
+	margin-left: auto;
+	width: 10%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+#form-str>a{
+	text-decoration: none;
+	display: flex;
+	font-size: 50px;
+}
+#form-str>#strona{
+	display: flex;
 	border: none;
 	border-radius: 10px;
-	padding: 1%;
+	padding: 10%;
 	cursor: pointer;
-	background-color: #f6ae24;
 	font-style: 20px;
+	background-color: transparent;
+	-webkit-appearance: none;
+  	-moz-appearance: none;
+  	appearance: none;
 }
-#strona:focus>option:first-child{
+#form-str>#strona:focus>option:first-child{
 	display: none;
 }
 /*stopka*/

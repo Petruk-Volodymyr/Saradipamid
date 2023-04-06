@@ -25,18 +25,28 @@
 								
 				<h1 style="cursor: pointer;" onclick="of()">&#10006;</h1>
 				<br><br>
-				<h1>Ty <?= @$_SESSION['user']['nazwisko']?> <?= @$_SESSION['user']['imie']?></h1>
+				<?php 
+
+				if (!@$_SESSION['user']) {
+					echo "<a href='login.php'>Zaloguj</a>";
+				}else{
+					echo "
+				<h1>Ty ".@$_SESSION['user']['nazwisko']." ".@$_SESSION['user']['imie']."</h1>
 				<br>
-				<h2>Chcesz zamówić <?= $row['nazwa']?>, za <?= $row['cena']?>$</h2>
+				<h2>Chcesz zamówić ".$row['nazwa'].", za ".$row['cena']."$</h2>
 				<br>
 				<br>
 				<br>
-				<?php echo "
+				
 				<form action='vendor/dod.php?tow=$ide' method='POST'>
 					<input name='adres' type='text' placeholder='Wpisz adres' required>
 					<input type='submit' value='Zamów'>
+
 				</form>
-				 "; ?>
+				 ";
+				}
+
+				 ?>
 				
 
 			</div>
@@ -104,10 +114,10 @@
 
 	 	</div>
 	 	<div class='type2'>
-	 		<div class='oczko'>
+	 		<div class='wsp'>
 	 		<h1 style='text-align: center;'>".$row['nazwa']."</h1><br>
-		 		<div class='typ'>Typ:".$row['typ']."</div>
-		 		<div class='cena'>Cena:".$row['cena']."$</div>
+		 		<div class='typ'>".$row['typ']."</div>
+		 		<div class='cena'>".$row['cena']."$</div>
 		 		<div class='opis'>
 		 			
 		 			<p>
@@ -121,7 +131,7 @@
 		 		<br>
 		 		<br>
 		 		<br>
-		 		<p><input onclick='on()' type='submit' value='Zamów' style='cursor: pointer;'></p>
+		 		<p><input onclick='on()' type='submit' value='Zamów'></p>
 			</div>
 
 	 	</div>
@@ -141,7 +151,7 @@
 			<br>
 			<p>Jesteśmy firmą z Karpat. Produkujemy najlepsze skarpetki na całą Urkainę. Nasze skarpetki mogą wytrzymać bombę.</p>
 			<br>
-			<h2>Kontakt:</h2><a href="#">skarpetkikarpaty@gmail.com</a>
+			<h2>Kontakt:</h2><a href="#">skarpetkikarpaty@notgmail.com</a>
 
 		</div>
 		<div class="fot2">

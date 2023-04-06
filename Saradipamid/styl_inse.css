@@ -73,6 +73,13 @@ header>.menu3>.log{
 	justify-content: center;
 	align-items: center;
 }
+.lal>.buba>.beba>a{
+	padding: 10px;
+	border-radius: 10px;
+	background-color: #252525;
+	color: #d7d7d7;
+	text-decoration: none;
+}
 .lal>.buba>.beba>form{
 	width: 100%;
 	display: flex;
@@ -122,44 +129,44 @@ article>div>img{
 	margin-left: auto;
 	margin-right: auto;
 }
-article>div>.oczko{
+article>div>.wsp{
 	width: 100%;
 	margin-top: 15%;
 }
-article>div>.oczko>.typ, .cena{
+article>div>.wsp>.typ, .cena{
 	width: 43%;
 	padding: 3%;
 	float: left;
 	background-color: #E8EEF1;
 	border: .2px #252525 solid;
 	border-radius: 10px;
-}
-article>div>.oczko>.cena{
-	float: right;
-}
-article>div>.oczko>p{
 	text-align: center;
 }
-article>.type2>.oczko>.opis{
+article>div>.wsp>.cena{
+	float: right;
+}
+article>div>.wsp>p{
+	text-align: center;
+}
+article>.type2>.wsp>.opis{
 	float: left;
 	margin-top: 5%;
 	background-color: #FEDE75;
-		padding: 2%;
+	padding: 2%;
 	border-radius: 10px;
 }
 article>.type2>h1{
 	font-size: 30px;
 }
-article>div>.oczko>p>input{
+article>div>.wsp>p>input{
 	border: none;
 	padding: 2%;
 	border-radius: 10px;
-	margin-top: 5%;
+	margin-top: 2%;
 	color: #E8EEF1;
+	cursor: pointer;
 	background-color: #252525;
 }
-
-
 /*stopka*/
 footer{
 	width: 100%;

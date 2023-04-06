@@ -107,7 +107,7 @@
 			<br>
 			<p>Jesteśmy firmą z Karpat. Produkujemy najlepsze skarpetki na całą Urkainę. Nasze skarpetki mogą wytrzymać bombę.</p>
 			<br>
-			<h2>Kontakt:</h2><a href="#">skarpetkikarpaty@gmail.com</a>
+			<h2>Kontakt:</h2><a href="#">skarpetkikarpaty@notgmail.com</a>
 
 		</div>
 		<div class="fot2">

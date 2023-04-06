@@ -36,8 +36,7 @@
 
 				if (@$_SESSION['user']) {
 					echo "
-
-					<a href='profile.php' style='text-decoration: none;'>Witaj ".@$_SESSION['user']['imie']."</a>
+					<a href='profile.php'>Witaj ".@$_SESSION['user']['imie']."</a>
 
 					";
 				}else {
@@ -125,7 +124,7 @@
 			<br>
 			<p>Jesteśmy firmą z Karpat. Produkujemy najlepsze skarpetki na całą Urkainę. Nasze skarpetki mogą wytrzymać bombę.</p>
 			<br>
-			<h2>Kontakt:</h2><a href="#">skarpetkikarpaty@gmail.com</a>
+			<h2>Kontakt:</h2><a href="#">skarpetkikarpaty@notgmail.com</a>
 
 		</div>
 		<div class="fot2">
