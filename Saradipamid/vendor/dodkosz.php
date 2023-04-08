@@ -17,7 +17,7 @@
 		<?php 
 
 		// Sprawdzamy czy istnieje masywa, jak nie to tworzymy ją
-		if (!isset($_POST['send'])) {
+		if (!$_SESSION['my_array']) {
 		    $_SESSION['my_array'] = array();
 		}
 
@@ -30,7 +30,7 @@
 		    }
 		}
 
-		header('location:../kosz.php');
+		header('location:../insert.php?id='.$number.'');
 
 	?>
 </body>

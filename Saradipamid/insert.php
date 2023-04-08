@@ -134,7 +134,7 @@
 		 		<p><input onclick='on()' type='submit' value='Zamów'></p>
 		 		<form method='POST' action='vendor/dodkosz.php'>
 			 		<input type='hidden' name='towar' value='".$ide."'>
-			 		<input type='submit' value='Zamów' name='send'>
+			 		<input type='submit' value='Dodaj do koszyka' name='send'>
 		 		</form>
 		 		
 			</div>

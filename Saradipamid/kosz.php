@@ -1,17 +1,22 @@
-<!-- <?php 
+<?php 
 
 	require_once"connect.php";
 		
-		print_r($_SESSION['my_array']);
+		
+		
+		if (!@$_SESSION['my_array']) {
+			$ile = 0;
+		}else{
+			$ile = count(@$_SESSION['my_array']);
+		}
+		
 		echo "<br>";
-		$ile = count($_SESSION['my_array']);
-		echo $ile;
+		print_r(@$_SESSION['my_array']);
 
 
-
-?> -->
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl-PL">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,7 +63,6 @@
 			</div>
 
 		</div>
-
 	</header>
 
 	<article>
@@ -79,18 +83,37 @@
 						<div class='info'>
 							<h1>".$row['nazwa']."</h1>
 							<h3>".$row['cena']."$</h3>
+							<form action='' method='POST'>
+								<input type='hidden' name='ustow' value='$id'>
+								<input type='submit' name='czmo' value='Usuń z kosza'>
+								<input type='submit' name='czmp' value='Usuń kosz'>
+							</form>
 						</div>
 					</div>";
 					}
 				}
-
+				$ust = @$_POST['ustow'];
+				if (isset($_POST['czmo'])) {
+					$licz = array_search($ust, @$_SESSION['my_array']);
+					
+					unset($_SESSION['my_array'][$licz]);
+					@$_SESSION['my_array'] = array_values(@$_SESSION['my_array']);
+					
+					header('location:kosz.php');
+				}
+				if (isset($_POST['czmp'])) {
+					unset($_SESSION['my_array']);
+					header('location:kosz.php');
+				}
+				if (empty(@$_SESSION['my_array'])) {
+					unset($_SESSION['my_array']);
+				}
 				?>
 
 			
 
 		</div>
 		<div class="konfig-kosz"></div>
-
 	</article>
 	<!-- Stopka -->
 	<footer id="stop">
