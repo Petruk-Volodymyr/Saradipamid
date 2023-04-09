@@ -8,7 +8,7 @@
 		}
 		
 		echo "<br>";
-		print_r(@$_SESSION['my_array']);
+		// print_r(@$_SESSION['my_array']);
 
 
 ?>
@@ -133,7 +133,28 @@
 
 
 		</div>
-		<div class="konfig-kosz"></div>
+		<div class="konfig-kosz">
+
+			<?php 
+
+				if (@$_SESSION['my_array']) {
+					echo "
+					<div>
+					<h1>Zamów</h1>
+						<form action='vendor/zamkosz.php' method='POST'>
+							<h4>Wpisz adres zamieszkania:</h4>
+							<input type='text' name='adres' required>
+							<input type='submit' value='Zamów' name='zamow'>
+
+						</form>
+					</div>
+					";
+				}
+
+			?>
+			
+
+		</div>
 	</article>
 	<!-- Stopka -->
 	<footer id="stop">

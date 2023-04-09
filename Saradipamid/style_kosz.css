@@ -64,43 +64,74 @@ header>.menu3>.log>a{
 }
 /*sekcja zamówienia z koszu*/
 article{
-	width: 98%;
+	width: 68%;
 	padding: 1%;
-	background-color: #252525;
 	display: flex;
 	margin: auto;
+	border: 1px solid #000;
+	border-radius: 10px;
 }
 article>.konfig-kosz{
 	padding: 1%;
-	background-color: #fff;
 }
 article>.konfig-kosz:first-child{
-	width: 29%;
+	width: 59%;
 }
-article>.konfig-kosz:last-child{
-	width: 69%;
-}
-article>.konfig-kosz>form>input{
-	background-color: transparent;
-	border: none;
-	cursor: pointer;
-}
-article>.konfig-kosz>.towar{
+article>.konfig-kosz:first-child>.towar{
 	display: flex;
 	align-items: center;
 	border: 1px solid #000;
 	margin: 1%;
+	border-radius: 10px;
 }
-article>.konfig-kosz>.towar>img{
+article>.konfig-kosz:first-child>.towar>img{
 	margin: 5%;
 }
-article>.konfig-kosz>.towar>.info{
+article>.konfig-kosz:first-child>.towar>.info{
 	width: 65%;
 	align-items: center;
 	display: flex;
 	justify-content: space-evenly;
+	
 }
-article>.konfig-kosz>.towar>.info>form>button{
+article>.konfig-kosz:first-child>.towar>.info>form>button{
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+article>.konfig-kosz:last-child{
+	width: 39%;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+article>.konfig-kosz:last-child>div{
+	position: fixed;
+}
+article>.konfig-kosz:last-child>div>form{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+article>.konfig-kosz:last-child>div>form>input{
+	margin: 5%;
+	border: none;
+	outline: none;
+	padding: 5%;
+}
+article>.konfig-kosz:last-child>div>form>input:nth-child(2){
+	border-bottom: 1px solid #000;
+	text-align: center;
+	background-color: transparent;
+}
+article>.konfig-kosz:last-child>div>form>input:last-child{
+	background-color: #252525;
+	color: #d7d7d7;
+	border-radius: 10px;
+	cursor: pointer;
+}
+article>.konfig-kosz:first-child>form>input{
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
