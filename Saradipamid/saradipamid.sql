@@ -95,7 +95,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Andzrej','Zarczuk','az_jebacPiS10','bd51b681a5dd70b9ff4bed0c95c51e7a','az.1ti@gmail.com','1939-09-01'),(2,'Oleg','Mongol','bebra','202cb962ac59075b964b07152d234b70','ebr@notgmail.com','2000-02-01'),(3,'anton','lakpotochumbenkowiczenkowicz','bebroid','202cb962ac59075b964b07152d234b70','bebr@notgmail.com','3333-03-12'),(4,'Kiril','Spermenko','nikita','c4ca4238a0b923820dcc509a6f75849b','niki@notgmail.com','2001-02-12'),(5,'barak','obama','motus','25d55ad283aa400af464c76d713c07ad','obam@notgmail.com','2000-02-21');
+INSERT INTO `users` VALUES (1,'Andzrej','Kowalski','Kowal10','bd51b681a5dd70b9ff4bed0c95c51e7a','kowal.i@gmail.com','1939-09-01'),(2,'Oleg','Mongol','bebra','202cb962ac59075b964b07152d234b70','ebr@notgmail.com','2000-02-01'),(3,'anton','lakpotochumbenkowiczenkowicz','bebroid','202cb962ac59075b964b07152d234b70','bebr@notgmail.com','3333-03-12'),(4,'Kiril','Spermenko','nikita','c4ca4238a0b923820dcc509a6f75849b','niki@notgmail.com','2001-02-12'),(5,'barak','obama','motus','25d55ad283aa400af464c76d713c07ad','obam@notgmail.com','2000-02-21');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 

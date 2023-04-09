@@ -1,3 +1,6 @@
+
+/*Ten plik css jest dla pliku insert.php*/
+
 *{
 	margin: 0;
 	padding: 0;
@@ -47,6 +50,11 @@ header>.menu3{
 }
 header>.menu3>.log{
 	float: right;
+	display: flex;
+	align-items: center;
+}
+header>.menu3>.log>a{
+	text-decoration: none;
 }
 .lal{
 	display: none;
@@ -166,6 +174,24 @@ article>div>.wsp>p>input{
 	color: #E8EEF1;
 	cursor: pointer;
 	background-color: #252525;
+}
+article>div>.wsp>form{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+article>div>.wsp>form>p{
+	margin-top: 2%;
+}
+article>div>.wsp>form>input[type='submit']{
+	border: none;
+	padding: 2%;
+	border-radius: 10px;
+	transform: scale(.8);
+	margin-top: 2%;
+	color: #E8EEF1;
+	cursor: pointer;
+	background-color: #424242;
 }
 /*stopka*/
 footer{

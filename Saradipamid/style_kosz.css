@@ -56,10 +56,10 @@ header>.menu3{
 }
 header>.menu3>.log{
 	float: right;
+	display: flex;
+	align-items: center;
 }
 header>.menu3>.log>a{
-	margin-top: auto;
-	margin-bottom: auto;
 	text-decoration: none;
 }
 /*sekcja zamówienia z koszu*/
@@ -80,6 +80,11 @@ article>.konfig-kosz:first-child{
 article>.konfig-kosz:last-child{
 	width: 69%;
 }
+article>.konfig-kosz>form>input{
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
 article>.konfig-kosz>.towar{
 	display: flex;
 	align-items: center;
@@ -87,8 +92,18 @@ article>.konfig-kosz>.towar{
 	margin: 1%;
 }
 article>.konfig-kosz>.towar>img{
-	width: 15%;
 	margin: 5%;
+}
+article>.konfig-kosz>.towar>.info{
+	width: 65%;
+	align-items: center;
+	display: flex;
+	justify-content: space-evenly;
+}
+article>.konfig-kosz>.towar>.info>form>button{
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
 }
 /*stopka*/
 footer{

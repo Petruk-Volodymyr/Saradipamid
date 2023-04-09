@@ -53,10 +53,10 @@ header>.menu3{
 }
 header>.menu3>.log{
 	float: right;
+	display: flex;
+	align-items: center;
 }
 header>.menu3>.log>a{
-	margin-top: auto;
-	margin-bottom: auto;
 	text-decoration: none;
 }
 /*sekcja witryny*/

@@ -1,9 +1,6 @@
 <?php 
 
 	require_once"connect.php";
-		
-		
-		
 		if (!@$_SESSION['my_array']) {
 			$ile = 0;
 		}else{
@@ -19,7 +16,6 @@
 <html lang="pl-PL">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Kosz</title>
 	<link rel="stylesheet" href="style_kosz.css">
 </head>
@@ -47,17 +43,17 @@
 
 				if (@$_SESSION['user']) {
 					echo "
+					
 					<a href='profile.php'>Witaj ".@$_SESSION['user']['imie']."</a>
 
 					";
 				}else {
 					echo "
 						<a href='login.php'>
-							<img src='img/BBD/profile.png' alt=''>
+							<svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24' fill='none' stroke='#252525'stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'></path><circle cx='12' cy='7' r='4'></circle></svg>
 						</a> 
 				";
 				}
-
 				?>
 				
 			</div>
@@ -68,7 +64,33 @@
 	<article>
 		
 		<div class="konfig-kosz">
-		<h1>Masz <?= $ile?> towary w swoim koszyku:</h1>
+		 
+		<?php 
+			
+			if ($ile > 1 && $ile < 5) {
+				echo "
+
+					<h1>Masz ".$ile." towary w swoim koszyku:</h1>
+
+				";
+			}elseif ($ile == 1 || $ile % 20 == 1) {
+				echo "
+
+					<h1>Masz ".$ile." towar w swoim koszyku:</h1>
+
+				";
+			}else{
+				echo "
+
+					<h1>Masz ".$ile." towarów w swoim koszyku:</h1>
+
+				";
+			}
+			if (@$_SESSION['my_array']) {
+				echo "<form action='' method='POST'><input type='submit' name='czmp' value='Usuń wszystko z kosza'></form>";
+			}
+
+		?> 
 
 				<?php 
 
@@ -81,13 +103,12 @@
 				
 						<img src='".$row['foto']."' alt=''>
 						<div class='info'>
-							<h1>".$row['nazwa']."</h1>
-							<h3>".$row['cena']."$</h3>
 							<form action='' method='POST'>
 								<input type='hidden' name='ustow' value='$id'>
-								<input type='submit' name='czmo' value='Usuń z kosza'>
-								<input type='submit' name='czmp' value='Usuń kosz'>
+								<button name='czmo'><svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24' fill='none' stroke='#252525'stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='3 6 5 6 21 6'></polyline><path d='M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2'></path><line x1='10' y1='11' x2='10' y2='17'></line><line x1='14' y1='11' x2='14' y2='17'></line></svg></button>
 							</form>
+							<h1>".$row['nazwa']."</h1>
+							<h3>".$row['cena']."$</h3>
 						</div>
 					</div>";
 					}
@@ -110,7 +131,6 @@
 				}
 				?>
 
-			
 
 		</div>
 		<div class="konfig-kosz"></div>
