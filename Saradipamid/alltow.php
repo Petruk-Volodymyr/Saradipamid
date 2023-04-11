@@ -24,13 +24,13 @@
 		<!-- Logo firmy -->
 		<div class="menu menu1">
 			
-			<p><a style="font-size: 30px; text-decoration: none;" href="index.php">Saradipamid</a></p>
+			<a href="index.php">Saradipamid</a>
 
 		</div>
 		<!-- Wspomagające przeciski -->
 		<div class="menu menu2">
 			
-			<a href="#towar">Towary</a>
+			<a href='alltow.php?page=1'>Towary</a>
 			<a href="#stop">O nas</a>
 
 		</div>
@@ -42,8 +42,9 @@
 
 				if (@$_SESSION['user']) {
 					echo "
+
 					<a href='kosz.php'><svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24' fill='none' stroke='#252525' stroke-width='2' stroke-linecap='round'	stroke-linejoin='round'><circle cx='10' cy='20.5' r='1'/><circle cx='18' cy='20.5' r='1'/><path d='M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1'/></svg></a>
-					<a href='profile.php' style='text-decoration: none;'>Witaj ".@$_SESSION['user']['imie']."</a>
+					<a href='profile.php'>Witaj ".@$_SESSION['user']['imie']."</a>
 
 					";
 				}else {
@@ -61,6 +62,8 @@
 		</div>
 
 	</header>
+	<br>
+	<hr>
 	<br>
 	<!-- Wszystkie towary -->
 	<article id="towar">
@@ -134,8 +137,6 @@
 			<h1>O nas</h1>
 			<br>
 			<p>Jesteśmy firmą z Karpat. Produkujemy najlepsze skarpetki na całą Urkainę. Nasze skarpetki mogą wytrzymać bombę.</p>
-			<br>
-			<h2>Kontakt:</h2><a href="#">skarpetkikarpaty@gmail.com</a>
 
 		</div>
 		<div class="fot2">
@@ -144,6 +145,8 @@
 			<br>
 			<p>Jak masz jakiś problem to możesz napisać do naszego specjalisty Wiktora.</p>
 			<br>
+			<h2>Kontakt:</h2><a href="#">skarpetkikarpaty@gmail.com</a>
+			<br><br>
 			<h2>Copyright&copy Nosky Karpaty Interprice 2023</h2>
 
 		</div>

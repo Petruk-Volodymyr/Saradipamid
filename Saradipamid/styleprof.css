@@ -95,15 +95,35 @@ article>.profil>div:last-child>a:hover{
 article>.historia{
 	width: 50%;
 }
-article>.historia>table{
+article>.historia>.bloki{
 	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
-article>.historia>table>tr, th, td{
-	border: 1px solid #000;
-	text-align: center;
+article>.historia>.bloki>.zamow{
+	width: 25%;
+	padding: 1%;
+	margin: 1%;
+	text-decoration: none;
+	border-radius: 10px;
+	border: 1px solid #252525;
+	transition: .5s;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 }
-article>.historia>table>tr, th{
-	background-color: #F6AE24;
+article>.historia>.bloki>.zamow>img{
+	width: 60%;
+	height: 80%;
+}
+article>.historia>.bloki>.zamow>.inf{
+	width: 98%;
+	padding: 1%;
+}
+article>.historia>.bloki>.zamow:hover{
+	transform: scale(1.02);
 }
 /*stopka*/
 footer{

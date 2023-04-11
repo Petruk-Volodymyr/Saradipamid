@@ -1,6 +1,9 @@
 <?php 
 
 	require_once"connect.php";
+	if (!@$_SESSION['user']) {
+		header('location:login.php');
+	}
 		if (!@$_SESSION['my_array']) {
 			$ile = 0;
 		}else{
@@ -164,8 +167,6 @@
 			<h1>O nas</h1>
 			<br>
 			<p>Jesteśmy firmą z Karpat. Produkujemy najlepsze skarpetki na całą Urkainę. Nasze skarpetki mogą wytrzymać bombę.</p>
-			<br>
-			<h2>Kontakt:</h2><a href="#">skarpetkikarpaty@notgmail.com</a>
 
 		</div>
 		<div class="fot2">
@@ -174,6 +175,8 @@
 			<br>
 			<p>Jak masz jakiś problem to możesz napisać do naszego specjalisty Wiktora.</p>
 			<br>
+			<h2>Kontakt:</h2><a href="#">skarpetkikarpaty@gmail.com</a>
+			<br><br>
 			<h2>Copyright&copy Nosky Karpaty Interprice 2023</h2>
 
 		</div>

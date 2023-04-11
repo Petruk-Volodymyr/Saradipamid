@@ -1,7 +1,6 @@
 *{
 	margin: 0;
 	padding: 0;
-	font-size: 24px;
 	color: #252525;
 }
 html{
@@ -13,39 +12,29 @@ body{
 	position: relative;
  	min-height: 100%;
 }
-h1{
-	font-size: 30px;
-}
 /*Konfiguracja hedera*/
 header{
-	width: 100%;
-	height: 50px;
+	width: 98%;
+	display: flex;
+	padding: 1%;
+	justify-content: space-between;
 }
 header>.menu{
 	display: flex;
-	float: left;
 	padding: 1%;
 	background-color: #EEF5FA;
+	align-items: center;
+}
+header>.menu>a{
+	text-decoration: none;
+	font-size: 24px;
 }
 header>.menu1, .menu3{
-	width: 18%;
-	height: 100%;
 	background-color: #EEF5FA;
 }
-header>.menu1>p{
-	font-size: 30px;
-	margin-top: auto;
-	margin-bottom: auto;
-}
 header>.menu2{
-	width: 58%;
-	height: 100%;
+	width: 80%;
 	justify-content: space-around;
-}
-header>.menu2>a{
-	margin-top: auto;
-	margin-bottom: auto;
-	text-decoration: none;
 }
 header>.menu3{
 	justify-content: right;
@@ -62,25 +51,28 @@ header>.menu3>.log>a{
 /*sekcja witryny*/
 #witr{
 	width: 100%;
-
+	position: relative;
 }
-#witr>section{
+#witr>.content{
+	width: 38%;
+	height: 100%;
+	padding: 1%;
+	position: absolute;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+}
+#witr>.content>.mini-content{
 	width: 100%;
-	height: 810px;
-	background: url("img/BBD/pres.jpg") no-repeat;
-	background-size: 100%;
+	font-size: 24px;
 }
-#witr>section>div{
-	width: 34%;
-	height: 95%;
-	padding: 1%;
+#witr>.background{
+	width: 100%;
+	height: auto;
 }
-#witr>section>div>div{
-	width: 97%;
-	height: 59%;
-	padding: 1%;
-	margin-top: 20%;
-	
+#witr>.background>img{
+	width: 100%;
+	height: auto;
 }
 /*towar*/
 .nag>p{
@@ -129,7 +121,7 @@ header>.menu3>.log>a{
 	width: 98%;
 	padding: 1%;
 }
-#towar>.to>.tow>div>a>input:hover{
+#towar>.to>.tow>div>a>input{
 	cursor: pointer;
 }
 #towar>.to>.tow>img{
@@ -182,4 +174,144 @@ footer>div{
 }
 footer>div>h1{
 	text-align: center;
+}
+/*Adaptywność strony*/
+@media screen and (min-width: 4096px){
+	*{
+		font-size: 60px;
+	}
+	.nag>p{
+		border: 5px solid #252525;
+		border-radius: none;
+	}
+}
+@media screen and (max-width: 1322px){
+	#witr{
+		width: 100%;
+		position: relative;
+		display: flex;
+	}
+	#witr>.content{
+		width: 98%;
+		padding: 1%;
+		margin-top: 0;
+		position: absolute;
+	}
+	#witr>.content>.mini-content{
+		width: 30%;
+	}
+
+}
+@media screen and (max-width: 438px){
+	*{
+		font-size: 18px;
+	}
+	/*	adaptywna stopka*/
+	header{
+	width: 100%;
+	height: 50px;
+	}
+	header>.menu{
+		display: flex;
+		width: 48%;
+		padding: 1%;
+		background-color: #EEF5FA;
+	}
+	header>.menu2{
+		display: none;
+	}
+	/*	adaptywna witryna*/
+	#witr{
+		width: 100%;
+		position: relative;
+		display: flex;
+	}
+	#witr>.content{
+		width: 98%;
+		padding: 1%;
+		margin-top: 0;
+		position: relative;
+		background-color: #d1d1d1;
+	}
+	#witr>.content>.mini-content{
+		width: 100%;
+	}
+	#witr>.background{
+		display: none;
+	}
+	/*adaptywna witryna z towarem*/
+	.nag>p{
+		padding: 4%;
+		text-align: center;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 10px;
+		width: 60%;
+		border: 1px solid #252525;
+	}
+	.nag>a{
+		padding: 4%;
+		text-align: center;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 10px;
+		width: 50%;
+		background-color: #f6ae24;
+		text-decoration: none;
+	}
+	.nag>a:hover{
+		background-color: #d09b1f;
+		transform: scale(1.02);
+	}
+	#towar{
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	#towar>.to{
+		margin: 1%;
+		width: 48%;
+		height: 50%;
+		text-decoration: none;
+		border-radius: 10px;
+		background-color: #E8EEF1;
+		box-shadow: 0px 0px 13px -5px rgba(66, 68, 90, 1);
+		transition: .5s;
+		transform: scale(.9);
+	}
+	#towar>.to:hover{
+		transform: scale(.91);
+	}
+	#towar>.to>.tow{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	#towar>.to>.tow>div{
+		width: 98%;
+		padding: 1%;
+	}
+	#towar>.to>.tow>img{
+		width: 50%;
+	}
+	/*adaptywna stpoka*/
+	footer{
+	width: 100%;
+	position: inherit;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #E8EEF1;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	}
+	footer>div{
+		width: 90%;
+		padding: 2%;
+	}
 }

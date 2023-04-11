@@ -18,7 +18,7 @@
 		<!-- Logo firmy -->
 		<div class="menu menu1">
 			
-			<p><a style="font-size: 30px; text-decoration: none;" href="index.php">Saradipamid</a></p>
+			<a href="index.php">Saradipamid</a>
 
 		</div>
 		<!-- Wspomagające przeciski -->
@@ -56,26 +56,19 @@
 		</div>
 
 	</header>
-	<br>
+
 	<!-- Witryna -->
 	<article id="witr">
-		
-		<section>
-			
-			<div>
-				
-				<div>
-					
-					<h1 style=" color: #433D29;font-size: 30px;">Bardzo dorbe skarpetki.<br>Kupuj teraz i będzie ci dobrze.</h1>
-					<br>
-					<p style="color: #433D29;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic quae dolorem, commodi. Recusandae iusto, temporibus est quia, labore, enim voluptatem facere nostrum dicta quos laborum laudantium, maiores doloremque natus odit.
-					Earum tempore officiis, ratione temporibus omnis accusantium natus, iure assumenda ipsum ducimus iusto perspiciatis id quaerat, esse placeat qui voluptate, sunt ullam. Ullam deleniti, adipisci incidunt odit eaque, repudiandae eligendi!</p>
-
+							
+				<div class="content">
+					<div class="mini-content">
+						<h1 style=" color: #433D29;">Bardzo dobre skarpetki.<br>Kupuj teraz i będzie ci dobrze.</h1>
+						<br>
+						<p style="color: #433D29;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic quae dolorem, commodi. Recusandae iusto, temporibus est quia, labore, enim voluptatem facere nostrum dicta quos laborum laudantium, maiores doloremque natus odit.
+						Earum tempore officiis, ratione temporibus omnis accusantium natus, iure assumenda ipsum ducimus iusto perspiciatis id quaerat, esse placeat qui voluptate, sunt ullam. Ullam deleniti, adipisci incidunt odit eaque, repudiandae eligendi!</p>
+					</div>
 				</div>
-
-			</div>
-
-		</section>
+				<div class="background"><img src="img/BBD/pres.jpg" alt=""></div>
 
 	</article>
 	<br>
@@ -97,7 +90,7 @@
 					
 					<img src='".$row['foto']."'>
 					<div>
-						<h1 style='font-size: 30px;'>".$row['nazwa']."</h1>
+						<h1>".$row['nazwa']."</h1>
 						<p>Typ:".$row['typ']."</p>
 						<p>Cena:".$row['cena']."$</p>
 						
@@ -125,8 +118,6 @@
 			<h1>O nas</h1>
 			<br>
 			<p>Jesteśmy firmą z Karpat. Produkujemy najlepsze skarpetki na całą Urkainę. Nasze skarpetki mogą wytrzymać bombę.</p>
-			<br>
-			<h2>Kontakt:</h2><a href="#">skarpetkikarpaty@notgmail.com</a>
 
 		</div>
 		<div class="fot2">
@@ -135,6 +126,8 @@
 			<br>
 			<p>Jak masz jakiś problem to możesz napisać do naszego specjalisty Wiktora.</p>
 			<br>
+			<h2>Kontakt:</h2><a href="#">skarpetkikarpaty@notgmail.com</a>
+			<br><br>
 			<h2>Copyright&copy Nosky Karpaty Interprice 2023</h2>
 
 		</div>
