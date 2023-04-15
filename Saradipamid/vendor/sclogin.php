@@ -1,8 +1,8 @@
 <?php 
-	require_once"../connect.php";
+	require_once"../connect/connect.php";
 	// Funkcja loginu
 	if (@$_SESSION['user']) {
-		header('location:index.php');
+		header('location:../main/index.php');
 	}
 	$log = $_POST['logi'];
 	$hasl = md5($_POST['hasl']);
@@ -18,10 +18,10 @@
 			"email" => $row['email']
 
 		];
-		header('Location: ../profile.php');
+		header('Location: ../profile/profile.php');
 	}else{
 		$_SESSION['wrongloging'] = 'Login lub hasło wpisano nie poprawnie';
-		header('Location:../login.php');
+		header('Location:../baza-danych/login.php');
 	}
 	
 	

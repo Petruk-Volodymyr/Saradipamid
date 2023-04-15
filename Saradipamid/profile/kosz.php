@@ -1,8 +1,8 @@
 <?php 
 
-	require_once"connect.php";
+	require_once"../connect/connect.php";
 	if (!@$_SESSION['user']) {
-		header('location:login.php');
+		header('location:../main/login.php');
 	}
 		if (!@$_SESSION['my_array']) {
 			$ile = 0;
@@ -11,7 +11,6 @@
 		}
 		
 		echo "<br>";
-		// print_r(@$_SESSION['my_array']);
 
 
 ?>
@@ -28,13 +27,13 @@
 		<!-- Logo firmy -->
 		<div class="menu menu1">
 			
-			<p><a style="font-size: 30px; text-decoration: none;" href="index.php">Saradipamid</a></p>
+			<p><a style="font-size: 30px; text-decoration: none;" href="../main/index.php">Saradipamid</a></p>
 
 		</div>
 		<!-- Wspomagające przeciski -->
 		<div class="menu menu2">
 			
-			<a href='alltow.php?page=1'>Towary</a>
+			<a href='../main/alltow.php?page=1'>Towary</a>
 			<a href="#stop">O nas</a>
 
 		</div>
@@ -47,12 +46,12 @@
 				if (@$_SESSION['user']) {
 					echo "
 					
-					<a href='profile.php'>Witaj ".@$_SESSION['user']['imie']."</a>
+					<a href='../profile/profile.php'>Witaj ".@$_SESSION['user']['imie']."</a>
 
 					";
 				}else {
 					echo "
-						<a href='login.php'>
+						<a href='../baza-danych/login.php'>
 							<svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24' fill='none' stroke='#252525'stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'></path><circle cx='12' cy='7' r='4'></circle></svg>
 						</a> 
 				";
@@ -123,11 +122,11 @@
 					unset($_SESSION['my_array'][$licz]);
 					@$_SESSION['my_array'] = array_values(@$_SESSION['my_array']);
 					
-					header('location:kosz.php');
+					header('location:../profile/kosz.php');
 				}
 				if (isset($_POST['czmp'])) {
 					unset($_SESSION['my_array']);
-					header('location:kosz.php');
+					header('location:../profile/kosz.php');
 				}
 				if (empty(@$_SESSION['my_array'])) {
 					unset($_SESSION['my_array']);
@@ -144,7 +143,7 @@
 					echo "
 					<div>
 					<h1>Zamów</h1>
-						<form action='vendor/zamkosz.php' method='POST'>
+						<form action='../vendor/zamkosz.php' method='POST'>
 							<h4>Wpisz adres zamieszkania:</h4>
 							<input type='text' name='adres' required>
 							<input type='submit' value='Zamów' name='zamow'>
@@ -183,4 +182,7 @@
 
 	</footer>
 </body>
+<?php 
+	mysqli_close($conn);
+?>
 </html>

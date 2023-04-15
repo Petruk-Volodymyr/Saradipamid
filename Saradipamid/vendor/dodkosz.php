@@ -1,9 +1,9 @@
 <?php 
 	// połączenie z bazą i początek sesji
-	require_once"../connect.php";
+	require_once"../connect/connect.php";
 
 	if (!@$_SESSION['user']) {
-		header('location:../login.php');
+		header('location:../baza-danych/login.php');
 	}else{
 		// Sprawdzamy czy istnieje masywa, jak nie to tworzymy ją
 		if (!$_SESSION['my_array']) {
@@ -19,7 +19,7 @@
 		    }
 		}
 		// po wykonaniu skryptu wracamy do strony z towarem jaki dodaliśmy do kuszu
-		header('location:../insert.php?id='.$number.'');
+		header('location:../baza-danych/insert.php?id='.$number.'');
 	}
 
 ?>

@@ -1,10 +1,10 @@
 <?php 
 	// połączenie z bazą i początek sesji
-	require_once"../connect.php";
+	require_once"../connect/connect.php";
 	// sprawndzenie czy istnieje koszyk lub czy jest zalogowany użytkownik
 	if ((!@$_SESSION['user'])||(!@$_SESSION['my_array'])) {
 		// jak nie ma koszyku lub nie jest zalogowany zostaje wysłany na stronę logowania 
-		header('location:../login.php');
+		header('location:../baza-danych/login.php');
 	}else{
 		// jak masywa istnieję będzie policzona ilość elementuw
 		$ile = count(@$_SESSION['my_array']);
@@ -23,7 +23,7 @@
 		// po wykonaniu pętli masywa koszyka będzie zniszczona
 		unset($_SESSION['my_array']);
 		// po wykonaniu szkryptu strona wróci do koszyk.php
-		header('location:../kosz.php');
+		header('location:../profile/kosz.php');
 	}
 	
 

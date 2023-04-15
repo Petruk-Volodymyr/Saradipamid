@@ -1,6 +1,6 @@
 <?php 
 
-		require_once"connect.php";
+		require_once"../connect/connect.php";
 		$ide = $_GET['id'];
 		$poc = "SELECT * FROM noski, typy WHERE noski.id=$ide and noski.typ = typy.typ;";
 		$opo = mysqli_query($conn, $poc);
@@ -38,7 +38,7 @@
 				<br>
 				<br>
 				
-				<form action='vendor/dod.php?tow=$ide' method='POST'>
+				<form action='../vendor/dod.php?tow=$ide' method='POST'>
 					<input name='adres' type='text' placeholder='Wpisz adres' required>
 					<input type='submit' value='Zamów'>
 
@@ -72,7 +72,7 @@
 		<!-- Wspomagające przeciski -->
 		<div class="menu menu2">
 
-			<a href='alltow.php?page=1'>Towary</a>
+			<a href='../main/alltow.php?page=1'>Towary</a>
 			<a href="#stop">O nas</a>
 
 		</div>
@@ -85,13 +85,13 @@
 				if (@$_SESSION['user']) {
 					echo "
 
-					<a href='kosz.php'><svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24' fill='none' stroke='#252525' stroke-width='2' stroke-linecap='round'	stroke-linejoin='round'><circle cx='10' cy='20.5' r='1'/><circle cx='18' cy='20.5' r='1'/><path d='M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1'/></svg></a>
+					<a href='../profile/kosz.php'><svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24' fill='none' stroke='#252525' stroke-width='2' stroke-linecap='round'	stroke-linejoin='round'><circle cx='10' cy='20.5' r='1'/><circle cx='18' cy='20.5' r='1'/><path d='M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1'/></svg></a>
 					<a href='profile.php'>Witaj ".@$_SESSION['user']['imie']."</a>
 
 					";
 				}else {
 					echo "
-						<a href='login.php'>
+						<a href='../baza-danych/login.php'>
 							<svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24' fill='none' stroke='#252525'stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'></path><circle cx='12' cy='7' r='4'></circle></svg>
 						</a> 
 				";
@@ -134,7 +134,7 @@
 		 		<br>
 		 		<br>
 		 		<p><input onclick='on()' type='submit' value='Zamów'></p>
-		 		<form method='POST' action='vendor/dodkosz.php'>
+		 		<form method='POST' action='../vendor/dodkosz.php'>
 			 		<input type='hidden' name='towar' value='".$ide."'>";
 			 		if (!@$_SESSION['my_array']) {
 			 			$czekkosz = null;
@@ -143,11 +143,11 @@
 			 		}
 					 if ($czekkosz) {	 	
 					 	echo "<p>Towar już jest w twoim 
-					 	<a href='kosz.php'>koszyku</a>.</p>";
+					 	<a href='../profile/kosz.php'>koszyku</a>.</p>";
 					 }else {
 					 	echo "<input type='submit' value='Dodaj do koszyka' name='send'>";
 					 }
-	echo "			
+				echo "			
 		 		</form>
 		 		
 			</div>

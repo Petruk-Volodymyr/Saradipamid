@@ -1,9 +1,9 @@
 <?php 
 	
-	require_once"connect.php";
+	require_once"../connect/connect.php";
 	// Sprawdzanie istnienia urzytkownika
 	if (@$_SESSION['user']) {
-		header('Location:index.php');
+		header('Location:../main/index.php');
 	}
 
 ?>
@@ -18,10 +18,10 @@
 
 <body>
 	<!-- Przycisk dla powrtu na stronę -->
-	<a class="pow" href="index.php">&#8592;Powrót</a>
+	<a class="pow" href="../main/index.php">&#8592;Powrót</a>
 	<div>
 		<!-- Formularz loginu -->
-		<form action="vendor/sclogin.php" method="POST">
+		<form action="../vendor/sclogin.php" method="POST">
 			<input name="logi" type="text" placeholder="Login"><br>
 			<input name="hasl" type="password" placeholder="Hasło"><br>
 			<input type="submit" value="Zaloguj"><br><br>

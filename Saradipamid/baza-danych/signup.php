@@ -1,8 +1,8 @@
 <?php 
 	
-	require_once"connect.php";
+	require_once"../connect/connect.php";
 	if (@$_SESSION['user']) {
-		header('Location:index.php');
+		header('Location:../main/index.php');
 	}
 	if (!$conn) {
 		echo "Baza zdechła";
@@ -22,7 +22,7 @@
 	<a class="pow" href="login.php">&#8592;Powrót</a>
 	<div>
 	<!-- Formularz rejestracyjny -->
-		<form action="vendor/scsignup.php" method="POST">
+		<form action="../vendor/scsignup.php" method="POST">
 			<input name="imie" type="text" placeholder="Imię" autocomplete="off" required><br>
 			<input name="nazw" type="text" placeholder="Nazwisko" autocomplete="off" required><br>
 			<input name="logi" type="text" placeholder="Login" autocomplete="off" required><br>

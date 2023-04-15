@@ -1,7 +1,7 @@
 <?php
-	require_once"connect.php";
+	require_once"../connect/connect.php";
 	if (!$_SESSION['user']) {
-		header('location:index.php');
+		header('location:../main/index.php');
 	}
 	$prof = @$_SESSION['user']['id'];
 	$sql = mysqli_query($conn, "SELECT noski.id, noski.foto, noski.nazwa, zamowienia.gdzie, DATE(zamowienia.dataczas) FROM `zamowienia`, `users`, `noski` WHERE zamowienia.id_klienta = '$prof' AND zamowienia.id_tow = noski.id GROUP BY id_zam DESC;");
@@ -19,12 +19,12 @@
 		
 		<div class="menu menu1">
 			
-			<p><a style="font-size: 30px; text-decoration: none;" href="index.php">Saradipamid</a></p>
+			<p><a style="font-size: 30px; text-decoration: none;" href="../main/index.php">Saradipamid</a></p>
 
 		</div>
 		<div class="menu menu2">
 			
-			<a href='alltow.php?page=1'>Towary</a>
+			<a href='../main/alltow.php?page=1'>Towary</a>
 			<a href="#stop">O nas</a>
 
 		</div>
@@ -45,7 +45,7 @@
 				<h1><?= @$_SESSION['user']['imie'] ?> <?= @$_SESSION['user']['nazwisko'] ?></h1>
 				<p><?= @$_SESSION['user']['email'] ?></p>
 
-				<a href="vendor/logout.php">Wyloguj</a>
+				<a href="../vendor/logout.php">Wyloguj</a>
 
 			</div>
 
@@ -53,19 +53,19 @@
 		<br>
 		<div class="historia">
 			<h1 style="float: left;">Historia zamówień:</h1>
-			<a style="float: right;" href='kosz.php'><svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24' fill='none' stroke='#252525' stroke-width='2' stroke-linecap='round'	stroke-linejoin='round'><circle cx='10' cy='20.5' r='1'/><circle cx='18' cy='20.5' r='1'/><path d='M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1'/></svg></a>
+			<a style="float: right;" href='../profile/kosz.php'><svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24' fill='none' stroke='#252525' stroke-width='2' stroke-linecap='round'	stroke-linejoin='round'><circle cx='10' cy='20.5' r='1'/><circle cx='18' cy='20.5' r='1'/><path d='M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1'/></svg></a>
 			<br>
 			<!-- Historia zamówień -->
 			<div class="bloki">	
 				<?php
 				// Sprawdzanie ilości towaru
 				if (mysqli_num_rows($sql)<1) {
-					echo "Nie robiłeś zakup, no morzesz <a href='alltow.php?page=1'>zaciąć</a>!";
+					echo "Nie robiłeś zakup, no morzesz <a href='../main/alltow.php?page=1'>zaciąć</a>!";
 				}else {
 					while ($row = mysqli_fetch_assoc($sql)) {
 
 					echo "
-						<a href='insert.php?id=".$row['id']."' class='zamow'>
+						<a href='../baza-danych/insert.php?id=".$row['id']."' class='zamow'>
 							<img src='".$row['foto']."' alt=''>
 							<div class='inf'>
 								<h4>".$row['DATE(zamowienia.dataczas)']."</h4>

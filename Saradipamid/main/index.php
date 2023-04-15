@@ -1,5 +1,5 @@
 <?php 
-	require_once"connect.php";
+	require_once"../connect/connect.php";
 	$com = "SELECT noski.id, noski.nazwa, noski.cena, noski.foto, typy.typ, typy.opis FROM noski, typy WHERE noski.typ = typy.typ ORDER BY noski.id DESC LIMIT 5; ";
 	$casd = mysqli_query($conn, $com);
 
@@ -37,13 +37,13 @@
 				if (@$_SESSION['user']) {
 					echo "
 
-					<a href='kosz.php'><svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24' fill='none' stroke='#252525' stroke-width='2' stroke-linecap='round'	stroke-linejoin='round'><circle cx='10' cy='20.5' r='1'/><circle cx='18' cy='20.5' r='1'/><path d='M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1'/></svg></a>
-					<a href='profile.php'>Witaj ".@$_SESSION['user']['imie']."</a>
+					<a href='../profile/kosz.php'><svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24' fill='none' stroke='#252525' stroke-width='2' stroke-linecap='round'	stroke-linejoin='round'><circle cx='10' cy='20.5' r='1'/><circle cx='18' cy='20.5' r='1'/><path d='M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1'/></svg></a>
+					<a href='../profile/profile.php'>Witaj ".@$_SESSION['user']['imie']."</a>
 
 					";
 				}else {
 					echo "
-						<a href='login.php'>
+						<a href='../baza-danych/login.php'>
 							<svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 24 24' fill='none' stroke='#252525'stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'></path><circle cx='12' cy='7' r='4'></circle></svg>
 						</a> 
 				";
@@ -64,11 +64,11 @@
 					<div class="mini-content">
 						<h1 style=" color: #433D29;">Bardzo dobre skarpetki.<br>Kupuj teraz i będzie ci dobrze.</h1>
 						<br>
-						<p style="color: #433D29;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic quae dolorem, commodi. Recusandae iusto, temporibus est quia, labore, enim voluptatem facere nostrum dicta quos laborum laudantium, maiores doloremque natus odit.
+						<p class="test" style="color: #433D29;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic quae dolorem, commodi. Recusandae iusto, temporibus est quia, labore, enim voluptatem facere nostrum dicta quos laborum laudantium, maiores doloremque natus odit.
 						Earum tempore officiis, ratione temporibus omnis accusantium natus, iure assumenda ipsum ducimus iusto perspiciatis id quaerat, esse placeat qui voluptate, sunt ullam. Ullam deleniti, adipisci incidunt odit eaque, repudiandae eligendi!</p>
 					</div>
 				</div>
-				<div class="background"><img src="img/BBD/pres.jpg" alt=""></div>
+				<div class="background"><img src="../img/BBD/pres.jpg" alt=""></div>
 
 	</article>
 	<br>
@@ -85,7 +85,7 @@
 
 			echo 
 			"
-			<a class='to' href='insert.php?id=".$row['id']."'>
+			<a class='to' href='../baza-danych/insert.php?id=".$row['id']."'>
 				<div class='tow'>
 					
 					<img src='".$row['foto']."'>
@@ -133,7 +133,6 @@
 		</div>
 
 	</footer>
-
 </body>
 </html>
 <?php 

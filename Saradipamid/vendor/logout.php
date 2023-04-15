@@ -1,7 +1,7 @@
 <?php 
 	// Wylogój
-	require_once"../connect.php";
+	require_once"../connect/connect.php";
 	// unset($_SESSION['user']);
-	header('Location:../index.php');
+	header('Location:../main/index.php');
 	session_unset();
 ?>
